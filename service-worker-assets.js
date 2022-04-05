@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-M8PQEVe6X\/y5k5mrqwYOlYtntyxW1IG0F4VdIOORltQ=",
+      "hash": "sha256-TksHJW37+nPqzrBqkSrzcJCOuleYiCyhW8VWg8m40Dk=",
       "url": "Characters.json"
     },
     {
@@ -541,5 +541,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "\/KYMUYB6"
+  "version": "\/Z8kqfu8"
 };
