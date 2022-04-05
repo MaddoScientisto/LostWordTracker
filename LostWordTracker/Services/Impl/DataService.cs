@@ -75,7 +75,9 @@ namespace LostWordTracker.Services.Impl
 
         public async Task<CharacterDefinitions> Import(string data)
         {
-            var loadedData = JsonSerializer.Deserialize<IList<CharacterStorage>>(System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String( data)));
+            //var loadedData = JsonSerializer.Deserialize<IList<CharacterStorage>>(System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String( data)));
+
+            var loadedData = JsonSerializer.Deserialize<IList<CharacterStorage>>(data);
 
             var charactersData = await LoadCharacterDefinitions();
             charactersData.CharacterStorage = new List<CharacterStorage>();
@@ -98,8 +100,8 @@ namespace LostWordTracker.Services.Impl
         public string Export(CharacterDefinitions characters)
         {
             string res = JsonSerializer.Serialize(characters.CharacterStorage);
-
-            return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(res));
+            return res;
+            //return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(res));
 
            
         }

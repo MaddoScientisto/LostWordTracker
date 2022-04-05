@@ -84,7 +84,7 @@
 
     public async Task Import()
     {
-        await _dataService.Import(_importData);
+        _characterDefinitions = await _dataService.Import(_importData);
     }
 
     public async Task Export()
