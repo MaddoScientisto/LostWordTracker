@@ -1,11 +1,14 @@
 ﻿@page "/"
 @inject HttpClient Http
+@inject Blazored.LocalStorage.ILocalStorageService _localStorage
 
 <p>ok let's go</p>
-
+<Button Clicked="@Save" Color="Color.Primary">Save</Button>
+        <Button Clicked="@Load" Color="Color.Secondary">Load</Button>
 <CardDeck>
     @if (characters != null)
     {
+        
         <Repeater Items="characters.Characters" TItem="Character">
             <Card>
                 <CardBody>
@@ -59,5 +62,15 @@
     public void Mark(Character character)
     {
         character.Obtained = true;
+    }
+
+    public async Task Save()
+    {
+        await _localStorage.SetItemAsync<CharacterData>("CharacterData", characters);
+    }
+
+    public async Task Load()
+    {
+        var data = await _localStorage.GetItemAsync<CharacterData>("CharacterData");
     }
 }

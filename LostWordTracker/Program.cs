@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using Blazorise;
 using Blazorise.Bootstrap5;
 using Blazorise.Icons.FontAwesome;
@@ -35,6 +36,9 @@ namespace LostWordTracker
     })
     .AddBootstrap5Providers()
     .AddFontAwesomeIcons();
+
+
+            builder.Services.AddBlazoredLocalStorage();
 
             await builder.Build().RunAsync();
         }
