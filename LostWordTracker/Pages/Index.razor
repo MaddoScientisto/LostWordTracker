@@ -1,61 +1,63 @@
 ﻿@page "/"
+@inject HttpClient Http
 
 <p>ok let's go</p>
 
 <CardDeck>
-    <Card>
-        <CardBody>
-            <CardTitle>Reimu</CardTitle>
-            <Button Color="Color.Primary">Mark</Button>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Marisa</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Reimu</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Marisa</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Reimu</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Marisa</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Reimu</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Marisa</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Reimu</CardTitle>
-        </CardBody>
-    </Card>
-    <Card>
-        <CardBody>
-            <CardTitle>Marisa</CardTitle>
-        </CardBody>
-    </Card>
+    @if (characters != null)
+    {
+        <Repeater Items="characters.Characters" TItem="Character">
+            <Card>
+                <CardBody>
+                    <CardTitle>@context.Name</CardTitle>
+                    <CardImage Source="@context.Portrait">
+
+                    </CardImage>
+                    <CardText>@context.Universe
+                    <Check Checked="@context.Obtained">Obtained</Check>
+                    </CardText>
+                    <CardFooter>
+                        <Button Color="Color.Primary" Clicked="@(e => @Mark(context))">Mark</Button>
+                    </CardFooter>
+                </CardBody>
+            </Card>
+        </Repeater>
+    }
+
+
 </CardDeck>
 
 @code {
+    private CharacterData characters;
 
+    protected override async Task OnInitializedAsync() 
+    {
+        await Test();
+    }
+
+    private async Task Test()
+    {
+        characters = await Http.GetFromJsonAsync<CharacterData>("Characters.json");
+    }
+
+    public class CharacterData
+    {
+        public IList<Character> Characters { get; set; }
+    }
+
+    public class Character
+    {
+        public string Name { get; set; }
+        public string Universe { get; set; }
+        public string Portrait { get; set; }
+        public string Tier { get; set; }
+        public bool Obtained { get; set; }
+        public bool Level { get; set; }
+
+    }
+
+    public void Mark(Character character)
+    {
+        character.Obtained = true;
+    }
 }
