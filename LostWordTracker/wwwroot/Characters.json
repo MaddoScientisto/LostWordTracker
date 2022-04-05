@@ -1,130 +1,130 @@
 {
-  "Characters": [
-    {
+  "Characters": {
+    "1": {
       "Id": 1,
       "Name": "Reimu Hakurei",
       "Universe": "L1",
       "Tier": "S",
       "Portrait": "images/portraits/100101_Reimu_Hakurei_SQ.webp"
     },
-    {
+    "2": {
       "Id": 2,
       "Name": "Marisa Kirisame",
       "Universe": "L1",
       "Tier": "C",
       "Portrait": "images/portraits/100201_Marisa_Kirisame_SQ.webp"
     },
-    {
+    "3": {
       "Id": 3,
       "Name": "Reimu Hakurei (Scarlet)",
       "Universe": "A6",
       "Tier": "EX",
       "Portrait": "images/portraits/Chara_Square_400101.webp"
     },
-    {
+    "4": {
       "Id": 4,
       "Name": "Youmu Konpaku (Lunar War Gardener)",
       "Universe": "B3",
       "Tier": "EX",
       "Portrait": "images/portraits/3011youmu_0.webp"
     },
-    {
+    "5": {
       "Id": 5,
       "Name": "Marisa Kirisame (Lunar War Enchanter)",
       "Universe": "B3",
       "Tier": "EX",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_300201.webp"
     },
-    {
+    "6": {
       "Id": 6,
       "Name": "Junko (Nameless Space Terror)",
       "Universe": "B2",
       "Tier": "EX",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_205701.webp"
     },
-    {
+    "7": {
       "Id": 7,
       "Name": "Tewi Inaba",
       "Universe": "L1",
       "Tier": "S+",
       "Portrait": "images/portraits/104201_Tewi_Inaba_SQ.webp"
     },
-    {
+    "8": {
       "Id": 8,
       "Name": "Suika Ibuki",
       "Universe": "L1",
       "Tier": "S+",
       "Portrait": "images/portraits/104801_Suika_Ibuki_SQ.webp"
     },
-    {
+    "9": {
       "Id": 9,
       "Name": "Iku Nagae",
       "Universe": "L1",
       "Tier": "S+",
       "Portrait": "images/portraits/Square_Thumbnail_109001.webp"
     },
-    {
+    "10": {
       "Id": 10,
       "Name": "Shion Yorigami",
       "Universe": "L1",
       "Tier": "S+",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_106601_0.webp"
     },
-    {
+    "11": {
       "Id": 11,
       "Name": "Doremy Sweet",
       "Universe": "L1",
       "Tier": "S",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_108001.webp"
     },
-    {
+    "12": {
       "Id": 12,
       "Name": "Hong Meiling",
       "Universe": "L1",
       "Tier": "S",
       "Portrait": "images/portraits/100701_Hong_Meiling_SQ.webp"
     },
-    {
+    "13": {
       "Id": 13,
       "Name": "Rin kaenbyou",
       "Universe": "L1",
       "Tier": "S",
       "Portrait": "images/portraits/Chara_SQ_105201.webp"
     },
-    {
+    "14": {
       "Id": 14,
       "Name": "Minamitsu Murasa",
       "Universe": "L1",
       "Tier": "S",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_107501.webp"
     },
-    {
+    "15": {
       "Id": 15,
       "Name": "Youmu Konpaku (Cherry Blossom)",
       "Universe": "A7",
       "Tier": "S",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_401101.webp"
     },
-    {
+    "16":{
       "Id": 16,
       "Name": "Medicine Melancholy",
       "Universe": "L1",
       "Tier": "S",
       "Portrait": "images/portraits/103601_Medicine_Melancholy_SQ.webp"
     },
-    {
+    "17": {
       "Id": 17,
       "Name": "Yuuka Kazami",
       "Universe": "L1",
       "Tier": "S",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_108401.webp"
     },
-    {
+    "18": {
       "Id": 18,
       "Name": "Koakuma",
       "Universe": "L1",
       "Tier": "A",
       "Portrait": "images/portraits/Chara_Square_Thumbnail_100801.webp"
     }
-  ]
+  }
 }

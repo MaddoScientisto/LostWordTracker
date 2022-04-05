@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Text.Json;
+using System;
 
 namespace LostWordTracker.Services.Impl
 {
@@ -19,48 +22,86 @@ namespace LostWordTracker.Services.Impl
             _mapper = mapper;
         }
 
-        public async Task<IList<CharacterDefinition>> LoadCharacterDefinitions()
+        public async Task<CharacterDefinitions> LoadCharacterDefinitions()
         {
-            return (await _httpClient.GetFromJsonAsync<CharacterDefinitionContainer>("Characters.json")).Characters;
+            return await _httpClient.GetFromJsonAsync<CharacterDefinitions>("Characters.json");
         }
 
-        public async Task<IList<Character>> GetCharactersData()
+        public async Task<CharacterDefinitions> GetCharactersData()
         {
             var loadedCharacters = await LoadCharacterDefinitions();
-            var characters = _mapper.Map<IList<Character>>(loadedCharacters);
-            return characters;
-        }
-
-        public async Task SaveData(IList<Character> characters)
-        {
-
-            var characterStorageContainer = new CharacterStorageContainer()
+            loadedCharacters.CharacterStorage = new List<CharacterStorage>();
+            foreach (var character in loadedCharacters.Characters)
             {
-                Characters = _mapper.Map<IList<CharacterStorage>>(characters)
-            };
-
-            await _localStorage.SetItemAsync<CharacterStorageContainer>("CharacterData", characterStorageContainer);
+                loadedCharacters.CharacterStorage.Add(new CharacterStorage()
+                {
+                    Id = character.Key,
+                    Level = 0,
+                    Obtained = false
+                });
+            }
+            
+            return loadedCharacters;
         }
 
-        public async Task<IList<Character>> LoadData()
+        public async Task SaveData(CharacterDefinitions characters)
+        {            
+            await _localStorage.SetItemAsync<CharacterStorageContainer>("CharacterData", new CharacterStorageContainer() { Characters = characters.CharacterStorage });
+        }
+
+        public async Task<CharacterDefinitions> LoadData()
         {
             var loadedData = await _localStorage.GetItemAsync<CharacterStorageContainer>("CharacterData");
-            IList<CharacterStorage> characterStoredData = loadedData.Characters;  // source two
-            IList<CharacterDefinition> charactersData = await LoadCharacterDefinitions(); // source one
+            
+            var charactersData = await LoadCharacterDefinitions();
+            charactersData.CharacterStorage = new List<CharacterStorage>();
 
-            var characters = _mapper.Map<IList<Character>>(charactersData);
-
-            // hack
-            int i = 0;
-            foreach(var character in characters)
+            foreach (var character in charactersData.Characters)
             {
-                character.Obtained = characterStoredData[i].Obtained;
-                character.Level = characterStoredData[i].Level;
-                i++;
+                var loadedChar = loadedData.Characters.FirstOrDefault(x => x.Id == character.Key);
+                if (loadedChar == null) continue;
+                charactersData.CharacterStorage.Add(new CharacterStorage()
+                {
+                    Id = character.Key,
+                    Level = loadedChar.Level,
+                    Obtained = loadedChar.Obtained
+                });
             }
-            //_mapper.Map<IList<CharacterStorage>,IList<Character>>(characterStoredData, characters);
 
-            return characters;
+           
+
+            return charactersData;
+        }
+
+        public async Task<CharacterDefinitions> Import(string data)
+        {
+            var loadedData = JsonSerializer.Deserialize<IList<CharacterStorage>>(System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String( data)));
+
+            var charactersData = await LoadCharacterDefinitions();
+            charactersData.CharacterStorage = new List<CharacterStorage>();
+
+            foreach (var character in charactersData.Characters)
+            {
+                var loadedChar = loadedData.FirstOrDefault(x => x.Id == character.Key);
+                if (loadedChar == null) continue;
+                charactersData.CharacterStorage.Add(new CharacterStorage()
+                {
+                    Id = character.Key,
+                    Level = loadedChar.Level,
+                    Obtained = loadedChar.Obtained
+                });
+            }
+
+            return charactersData;
+        }
+
+        public string Export(CharacterDefinitions characters)
+        {
+            string res = JsonSerializer.Serialize(characters.CharacterStorage);
+
+            return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(res));
+
+           
         }
     }
 }

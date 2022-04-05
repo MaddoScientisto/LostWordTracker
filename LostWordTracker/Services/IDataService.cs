@@ -6,9 +6,13 @@ namespace LostWordTracker.Services
 {
     public interface IDataService
     {
-        Task<IList<CharacterDefinition>> LoadCharacterDefinitions();
-        Task<IList<Character>> GetCharactersData();
-        Task SaveData(IList<Character> characters);
-        Task<IList<Character>> LoadData();
+        Task<CharacterDefinitions> LoadCharacterDefinitions();
+        Task<CharacterDefinitions> GetCharactersData();
+        Task SaveData(CharacterDefinitions characters);
+        Task<CharacterDefinitions> LoadData();
+
+        Task<CharacterDefinitions> Import(string data);
+
+        string Export(CharacterDefinitions characters);
     }
 }

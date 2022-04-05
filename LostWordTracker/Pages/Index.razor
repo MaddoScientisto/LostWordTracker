@@ -14,20 +14,32 @@
         <Button Clicked="@Load" Color="Color.Secondary">Load</Button>
     </CardBody>
 </Card>
+<Card>
+    <CardHeader>Import/Export string</CardHeader>
+    <CardBody>
+        <TextEdit Size="Size.Large" @bind-Text="@_importData"/>
+    </CardBody>
+    <CardFooter>
+        <Button Clicked="@Import" Color="Color.Primary">Import</Button>
+        <Button Clicked="@Export" Color="Color.Secondary">Export</Button>
+    </CardFooter>
+</Card>
+
 
 <CardDeck>
-    @if (_characters != null)
+    @if (_characterDefinitions != null)
     {
-
-        <Repeater Items="_characters" TItem="Character">
+   
+        <Repeater Items="_characterDefinitions.CharacterStorage" TItem="CharacterStorage">
+            @{ var currentCharData = _characterDefinitions.Characters[context.Id];}
             <Card>
                 <CardBody>
-                    <CardTitle>@context.Name</CardTitle>
-                    <CardImage Source="@context.Portrait">
+                    <CardTitle>@currentCharData.Name</CardTitle>
+                    <CardImage Source="@currentCharData.Portrait">
 
                     </CardImage>
                     <CardText>
-                        @context.Universe
+                        @currentCharData.Universe
                         <Check @bind-Checked="@context.Obtained">Obtained</Check>
                     </CardText>
                     <CardFooter>
@@ -42,30 +54,41 @@
 </CardDeck>
 
 @code {
+    private CharacterDefinitions _characterDefinitions;
+    //private ObservableCollection<Character> _characters { get; set; }
 
-
-    private ObservableCollection<Character> _characters { get; set; }
+    private string _importData = "";
 
     protected override async Task OnInitializedAsync()
     {
-        _characters = new(await _dataService.GetCharactersData());
+        _characterDefinitions = await _dataService.GetCharactersData();
     }
 
 
-    public void Mark(Character character)
+    public void Mark(CharacterStorage character)
     {
         character.Obtained = true;
     }
 
     public async Task Save()
     {
-        await _dataService.SaveData(_characters);
+        await _dataService.SaveData(_characterDefinitions);
         //await _localStorage.SetItemAsync<CharacterData>("CharacterData", characters);
     }
 
     public async Task Load()
     {
-        _characters = new(await _dataService.LoadData());
+        _characterDefinitions = await _dataService.LoadData();
         //var data = await _localStorage.GetItemAsync<CharacterData>("CharacterData");
+    }
+
+    public async Task Import()
+    {
+        await _dataService.Import(_importData);
+    }
+
+    public async Task Export()
+    {
+        _importData = _dataService.Export(_characterDefinitions);
     }
 }
