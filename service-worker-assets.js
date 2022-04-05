@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-TksHJW37+nPqzrBqkSrzcJCOuleYiCyhW8VWg8m40Dk=",
+      "hash": "sha256-dzZR+t3pkyn2ojhRtJrBrGTHvMYxxdgchBHM7SQ0olE=",
       "url": "Characters.json"
     },
     {
@@ -181,7 +181,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-AsDGn47P2Oa2naNlktjFTKYoHPCmP55T2fzISm7douI=",
+      "hash": "sha256-XNGQLCdQ8zhwQ\/vFyBpRHuVICRrAtXLRppRjpSVUooI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -213,7 +213,7 @@
       "url": "_framework\/Blazorise.Icons.FontAwesome.dll"
     },
     {
-      "hash": "sha256-RXGbbRzyBixCgn6YS9f7OGw2YrnnXM+lgNyZ3Owt+gM=",
+      "hash": "sha256-+h8eDzahBSfcLDSGfZqIFPCl5PhOj92lfdG7jMoubU0=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -357,11 +357,11 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-EQvg7+zHDieWSrke0hFLOvqrfCrhtvF3N+yOJu7F9qM=",
+      "hash": "sha256-YIMqqehp7\/KBEO\/scd7nB6X2Y0AWMAzayMgolnYtb6M=",
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-lV3ATawVENOHSqR5PByhA0QA2sSht7mhYqOdtox87oQ=",
+      "hash": "sha256-KXP7xSklX5uSE7AJ3+THTQ9Vl7+ZTjWEzfqChLB7Qig=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -541,5 +541,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "\/Z8kqfu8"
+  "version": "fWRA+Ejd"
 };
