@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-dzZR+t3pkyn2ojhRtJrBrGTHvMYxxdgchBHM7SQ0olE=",
+      "hash": "sha256-EUHR\/GuLo5rzD411jmCWk5z7s\/EEYP+znI6HohmJ4Ic=",
       "url": "Characters.json"
     },
     {
@@ -69,12 +69,108 @@
       "url": "images\/portraits\/100201_Marisa_Kirisame_SQ.webp"
     },
     {
+      "hash": "sha256-gBkBVE7Z+ZlpIVf3YYakJbUMfek8kE2iMaHHh4UE5VI=",
+      "url": "images\/portraits\/100301_Remilia_Scarlet_SQ.webp"
+    },
+    {
+      "hash": "sha256-80jwMrGhz16L1mYhv+9rhG57luNOUNvsCX1Tw4ETq3A=",
+      "url": "images\/portraits\/100401_Flandre_Scarlet_SQ.webp"
+    },
+    {
+      "hash": "sha256-GTyHhaNCQLbFclIRJDG5MGaGjuNvFPp4dYX3wRGsXKY=",
+      "url": "images\/portraits\/100501_Sakuya_Izayoi_SQ.webp"
+    },
+    {
+      "hash": "sha256-rOXK7G1R0y\/Mb4HbXCRylmmf8zH4AXCkjzF5Q+nEiz0=",
+      "url": "images\/portraits\/100601_Patchouli_Knowledge_SQ.webp"
+    },
+    {
       "hash": "sha256-fcuxEB4\/Yq+IlRqF7jdY7lLU7XbRJqEf3Ja29BCnglY=",
       "url": "images\/portraits\/100701_Hong_Meiling_SQ.webp"
     },
     {
+      "hash": "sha256-ZNtoU6gOhGtkTQ6cH9TItcF6M22gFLGwlN4ubBWtYuA=",
+      "url": "images\/portraits\/100901_Yukari_Yakumo_SQ.webp"
+    },
+    {
+      "hash": "sha256-qdEz60cqNIPZ+BThd7yFprFQGuQMM25Z1cyEY\/Vf22k=",
+      "url": "images\/portraits\/101101_Youmu_Konpaku_SQ.webp"
+    },
+    {
+      "hash": "sha256-ENDAsYAnnNOuYPgb7TAN9OSae96y2W+pZgR1VGBTjdI=",
+      "url": "images\/portraits\/101201_Lily_White_SQ.webp"
+    },
+    {
+      "hash": "sha256-2mLT\/TxcWUz2mEib+HQW5dr0Xuivivg76dTWSupftoA=",
+      "url": "images\/portraits\/101301_Ran_Yakumo_SQ.webp"
+    },
+    {
+      "hash": "sha256-+y52rR6VRI\/DxKwnUbNY3T3b07lWjcaGaQF2c4VrjR4=",
+      "url": "images\/portraits\/101401_Chen_SQ.webp"
+    },
+    {
+      "hash": "sha256-Q5QwkKSznAloqBUWSASAD\/5VCHn3xSmCt3ixfOpAot4=",
+      "url": "images\/portraits\/101501_Reisen_Udongein_Inaba_SQ.webp"
+    },
+    {
+      "hash": "sha256-aXHJM5moCDd6Oh2y5XU6CLMhK0leOge+OgqlPQbxezk=",
+      "url": "images\/portraits\/101701_Watatsuki_no_Yorihime_SQ_0.webp"
+    },
+    {
+      "hash": "sha256-QzJQgffY9ExQBBl+b6sXjcvM6bKO4bGj1Nvbdf8wGio=",
+      "url": "images\/portraits\/102101_Seiran_SQ.webp"
+    },
+    {
+      "hash": "sha256-Eq2FER7d3IKf2Ua0KHC1qYD039W70m6o6rcLw5UPkJw=",
+      "url": "images\/portraits\/102201_Ringo_SQ.webp"
+    },
+    {
+      "hash": "sha256-\/PGKfxI\/mD2cJz1JFv4mxn5QnsiUvVYXSwvgJJPNn\/o=",
+      "url": "images\/portraits\/102301_Reisen_SQ.webp"
+    },
+    {
+      "hash": "sha256-LtAqwgDvPVxNYgDHrGFM6C3e+q8t4MNsAl8bu5\/nULI=",
+      "url": "images\/portraits\/102401_Byakuren_Hijiri_SQ.webp"
+    },
+    {
+      "hash": "sha256-xXykSyOPVB4opjFaedNUlqFjBacnRPjmvG66CndA8aE=",
+      "url": "images\/portraits\/102501_Kasen_Ibaraki_SQ.webp"
+    },
+    {
+      "hash": "sha256-NrYFbdKNpL4BGkQ3YHqiVEb7vm8f3kF7UavnoezY5VY=",
+      "url": "images\/portraits\/103001_Cirno_SQ.webp"
+    },
+    {
+      "hash": "sha256-AZ\/jJ6dd3nZSxL9\/4CmMyLShAxADeVSC3PI5lZFPOqM=",
+      "url": "images\/portraits\/103101_Daiyousei_SQ.webp"
+    },
+    {
+      "hash": "sha256-MfFfR4YV+r3VWXcqw9lU6Pc8pFP+b2bpMxkkGwmrXxg=",
+      "url": "images\/portraits\/103201_Alice_Margatroid_SQ.webp"
+    },
+    {
+      "hash": "sha256-XsBGdvU\/M+ca9hAET98eF+OMhBAlmaKp334QXFnzFpQ=",
+      "url": "images\/portraits\/103301_Sunny_Milk_SQ.webp"
+    },
+    {
+      "hash": "sha256-MZaw73HCBPoJdINNgJ5fDigZ9Arz+kLz1DF8tk6Lwpk=",
+      "url": "images\/portraits\/103401_Luna_Child_SQ.webp"
+    },
+    {
+      "hash": "sha256-GxYqQ1uFTNtlVJuR9CXw+sBAEn+Gkewu4iuMcolEdqE=",
+      "url": "images\/portraits\/103501_Star_Sapphire_SQ.webp"
+    },
+    {
       "hash": "sha256-XV7Gl79k1+gKTxThT3E56hiu73Q2EtckkxXj1D4\/L6g=",
       "url": "images\/portraits\/103601_Medicine_Melancholy_SQ.webp"
+    },
+    {
+      "hash": "sha256-TIEgq3vhIMR3UXKxvgnBIumAzTmUsGBbGtb1PCigWUk=",
+      "url": "images\/portraits\/103701_Sanae_Kochiya_SQ.webp"
+    },
+    {
+      "hash": "sha256-t\/\/PXr7VTjnSldZMLzVkBy4TpRVxBtEF9LQ3B4bFJW4=",
+      "url": "images\/portraits\/104001_Nitori_Kawashiro_SQ.webp"
     },
     {
       "hash": "sha256-vFNY2GzzjjiLXXNqyZRdtXnnw8DOo8dTCRSSJR9xOJw=",
@@ -85,8 +181,24 @@
       "url": "images\/portraits\/104801_Suika_Ibuki_SQ.webp"
     },
     {
+      "hash": "sha256-a78lL3cQivf\/Wujsj7pbtRn5ZJlhE0\/rHMcBBmJs2FM=",
+      "url": "images\/portraits\/200201_Marisa_Kirisame_WoSD_SQ.webp"
+    },
+    {
+      "hash": "sha256-pc8b4Esdu6G9JNrAnlomRTao8QnvIaNdeCtMdU35S6k=",
+      "url": "images\/portraits\/203001_thumbnail.webp"
+    },
+    {
+      "hash": "sha256-cg+zhB+sV+GYNyYeo2StikIGPyNwYukbOdUPE30xAK0=",
+      "url": "images\/portraits\/3011reimu.webp"
+    },
+    {
       "hash": "sha256-SW9WIu3wX5xrLRqwS9BUTYe7XbfLgKJTs\/VnuoJeAbY=",
       "url": "images\/portraits\/3011youmu_0.webp"
+    },
+    {
+      "hash": "sha256-e6QKo7s9OQXKD5Th\/tYaJwXqFqQxuc45lz5JTpjVTjY=",
+      "url": "images\/portraits\/Char_Square_Thumbnail_105301.webp"
     },
     {
       "hash": "sha256-w\/oHKhOZtvmUCldyzMVvhLj26MCJu3vJdGQk6ysQY44=",
@@ -101,24 +213,208 @@
       "url": "images\/portraits\/Chara_Square_Thumbnail_100801.webp"
     },
     {
+      "hash": "sha256-mXIMeUfVuqKssgWsZL+oq04NiJlBTwwnibcB6py+Vy4=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_101801.webp"
+    },
+    {
+      "hash": "sha256-SMSzTBcgyKJATzCQxhfkH5lhoAE2gn\/MjPWvs4xpASc=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_101901.webp"
+    },
+    {
+      "hash": "sha256-h2zeHirKQmW5RdLcfzrn4wDQgFtLbS9T8SLUPbSJ+50=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_102001.webp"
+    },
+    {
+      "hash": "sha256-z4jkOPEK9egpAz4AWFMaavjMHhjZMYQNPDs2XnoFAjI=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_102601.webp"
+    },
+    {
+      "hash": "sha256-7OyO7Wo+L\/gOZUxeCmEtpeFEAwGPnMlRb1TO6Bm6s98=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_102901.webp"
+    },
+    {
+      "hash": "sha256-9gNGmHrTbJc6ljPv93EX+A2hZFQO3XkBKCKz7NvMFTg=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_103801.webp"
+    },
+    {
+      "hash": "sha256-1i6fsp0xhG6AHelzT9ufaWi4muvI3iJxCITaphBwZDc=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_103901.webp"
+    },
+    {
+      "hash": "sha256-zdRLIC1u5Uy\/d3plsY8MWXaRbds\/uNXRqj1aqxw7BR0=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_104401.webp"
+    },
+    {
+      "hash": "sha256-j7MWLC1uqeTOLlIo82bzkYKrXl6mWd3Ht6J+di1BpWg=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_104501_0.webp"
+    },
+    {
+      "hash": "sha256-K1kzaE7dkFmevjMxVWcESGuW8ZavdX7fJUnrnpMjJnI=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_104601.webp"
+    },
+    {
+      "hash": "sha256-LBZLyYmPP2bnlYCLDrXXAF4z4K3Rko5hS7AV83HOVB4=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_104701_0.webp"
+    },
+    {
+      "hash": "sha256-JD6ciavT4RXvz6ShHEntIBSLnDrgXiEEFwZbeqfm\/OM=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_104901.webp"
+    },
+    {
+      "hash": "sha256-wlNDZez0XzOtxqWyIepMxIyss+6xgUHfIQ9fVdtsJWw=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_105001.webp"
+    },
+    {
+      "hash": "sha256-GToEYHKohw9FMblc0nf6l42vbf75XDZgwlIMtU+ylb4=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_105101.webp"
+    },
+    {
+      "hash": "sha256-yt1gcgXDleqxhN4I3zao6cqBkwl3P3TNgOpKGtUmir0=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_105401.webp"
+    },
+    {
+      "hash": "sha256-uhBRHGaPWZLvYppnKXj7OpRoaGjd0l3FX8OxzhrOSFA=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_105601_0.webp"
+    },
+    {
+      "hash": "sha256-u7Jyo4GuOQdOcAFSMVg2MjaT0NJ\/BIQAtyx4GPpncLI=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_105701.webp"
+    },
+    {
+      "hash": "sha256-HQNwmToPHM0c8Ee\/u8HrHu3SnEtHmdnA+9S38\/QsoKk=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_105801.webp"
+    },
+    {
+      "hash": "sha256-ebr7VNFYLUNHLvYaUHPvI2N6p0PV6v+LnSBEcC\/pYUo=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_105901.webp"
+    },
+    {
+      "hash": "sha256-U4zlMg+FxG7B4QhebUbMRNTj+2fd2Jr7cjAopwVQPpA=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106001.webp"
+    },
+    {
+      "hash": "sha256-S1+jsjBRLNZEuxd\/kmZ+InIUhhDvVTpLKE\/AGqHCl5E=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106101.webp"
+    },
+    {
+      "hash": "sha256-v\/ml2f801D4CphPY1ac1RUvGefrK8uY6T5LAVkcRIXo=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106201.webp"
+    },
+    {
+      "hash": "sha256-Kjzh73RU5rnnugfUgVK9PWsG5BPBiOAUu7MBKfJdYic=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106301.webp"
+    },
+    {
+      "hash": "sha256-4NkebXVDtUMVVHErxnWZbGorB8eBf686jdn2ZTDcJF4=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106401.webp"
+    },
+    {
+      "hash": "sha256-d0tOP0qUxUnifKsPaANAvYF2ihnflDihOnvk13HBZaI=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106501_0.webp"
+    },
+    {
       "hash": "sha256-MjfkMBo3AqedyX+8K5gY+jFFEhuoBw7vNmvyqtT74fA=",
       "url": "images\/portraits\/Chara_Square_Thumbnail_106601_0.webp"
+    },
+    {
+      "hash": "sha256-NDWHiEcatg5hpr9T2o8WPt5dlYNvZpr1E\/U1g1U4iT0=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106701.webp"
+    },
+    {
+      "hash": "sha256-BwRpfQMwjOHtE+ncup9igy6uKHzfd8zLCxa10In8Zks=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106801.webp"
+    },
+    {
+      "hash": "sha256-LeR8jHb6oLTBNHdwc2VmZ8n8+5GbKobw5VDdR2GWqbo=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_106901.webp"
+    },
+    {
+      "hash": "sha256-37NrwgRPLmbhMfMApfeRG55SVtbRqIIUijvB4OfQqOM=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_107001.webp"
+    },
+    {
+      "hash": "sha256-0hrSE0DQcsGgfKsOFyHwbkd2INn8j7V4XNsjxu0DPQ0=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_107101.webp"
+    },
+    {
+      "hash": "sha256-0E4UTij+quM2OxgRVtnwTvWCCYTZwroHibfN5Clh138=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_107201.webp"
+    },
+    {
+      "hash": "sha256-MPN9MNMqb+UOiIKiXWpRKCrFwFTpD45\/vhpkUIJFiGE=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_107301.webp"
+    },
+    {
+      "hash": "sha256-9Xq3leGdtmBQ4xR1c0yhhThe8+Ybm1F0OB5citlZkYw=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_107401_0.webp"
     },
     {
       "hash": "sha256-fVLUjmBJ3VLSS9KT+xM9qHE6VM2ZVVZxJhGj0pyhtFo=",
       "url": "images\/portraits\/Chara_Square_Thumbnail_107501.webp"
     },
     {
+      "hash": "sha256-K+L7NXrwIPiFAkRJW7fdjP8cWTAvSOcir0h89nhoiGM=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_107901.webp"
+    },
+    {
       "hash": "sha256-EHKpukhDkn08c8RXrtowg0oxuYgSxJm2GnylffEopbE=",
       "url": "images\/portraits\/Chara_Square_Thumbnail_108001.webp"
+    },
+    {
+      "hash": "sha256-x5qx4LMoInO4ztLGxwpxBInqoaxdeIqkM9Qo4p4MGWI=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_108101_0.webp"
+    },
+    {
+      "hash": "sha256-e02tFbURKXdBBIl1jDSBbL0Gey\/\/Zwnpgn3ncYiAG3k=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_108201.webp"
     },
     {
       "hash": "sha256-W\/ZZSkquBt925NCtmkLhO2TUBbB31pKyviCJH9BOHFU=",
       "url": "images\/portraits\/Chara_Square_Thumbnail_108401.webp"
     },
     {
+      "hash": "sha256-bwxwK2H3J0oFbui7ThlPY7nz8nHEDoU4SKJidEBj2rk=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_108501.webp"
+    },
+    {
+      "hash": "sha256-wG\/PF40CzNSmZckxvwd\/+gSonY9Uk4SQxQPQnwbbzbo=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_108601.webp"
+    },
+    {
+      "hash": "sha256-vmmnIHV2F4g\/HN5imGrEouo+y0L1+Mlxr9fwPWU0McI=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_108701.webp"
+    },
+    {
+      "hash": "sha256-MHoJD1GPuQZBjOctb0wMgct3UsPVI0q1tszqtS8nqdY=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_108801.webp"
+    },
+    {
+      "hash": "sha256-7Oju50tqMGNUuANrOMlr2kEzvgX+9+bZYY3Qvo91sNM=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_108901_0.webp"
+    },
+    {
+      "hash": "sha256-\/j\/MsM3ABepGHOT4bFjRmTE72rKTiPe0+CzvEkvzUP8=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_109101.webp"
+    },
+    {
+      "hash": "sha256-wi9PaZulMfRgNb54DMKaSxM4IL7aeUCenyTlRuxp6R8=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_111001.webp"
+    },
+    {
       "hash": "sha256-mnHhz14uH17rH4u7j2m4BQ2mMlrDKE\/QywSkt7EC7nE=",
       "url": "images\/portraits\/Chara_Square_Thumbnail_201101.webp"
+    },
+    {
+      "hash": "sha256-VHWHYOgl9Zkv3A9ERiyrL2KLASOTFDsh5+86ophZ2b0=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_201601.webp"
+    },
+    {
+      "hash": "sha256-\/amx0Qw\/m7J1mQUjYZegRbR38ZItdd+lHo9ZyEA7dlg=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_201701.webp"
+    },
+    {
+      "hash": "sha256-Evh3z6evx0NYLY9+x1P+nzq9lu\/zUOaNGcu0KsSeInU=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_202401_0.webp"
     },
     {
       "hash": "sha256-ugNAioSDUUlPoMSTMp13TMBU6A0VzkJlIQ3OLqJaLNc=",
@@ -129,8 +425,44 @@
       "url": "images\/portraits\/Chara_Square_Thumbnail_300201.webp"
     },
     {
+      "hash": "sha256-Wq3rpHoZwODYZtQMOrFyS3DCDv+t2gNU6Xo19MOADa4=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_300501.webp"
+    },
+    {
+      "hash": "sha256-Pv\/05HtOUsTaXodPRzyZbO4r4u+xAzF5u3HYbQNrzxU=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_301501.webp"
+    },
+    {
+      "hash": "sha256-elbv6v3Sv77OnCe5fPgn+l8zwjVkMCOR4fkxn6\/uZ3E=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_303701.webp"
+    },
+    {
+      "hash": "sha256-dkDg3DjlS7Hsw8YM989PjO4JE6Tn24m3VBPQ+N9JAIA=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_400201.webp"
+    },
+    {
+      "hash": "sha256-i8eclyK8CYX2NgPDXkr6q+C8DBb6x6uCsZuhvOsa4PI=",
+      "url": "images\/portraits\/Chara_Square_Thumbnail_400501.webp"
+    },
+    {
       "hash": "sha256-+3CZmkkQ5Rg9DP20O5J557e7uhcBzOXMBYKTtoXbQmg=",
       "url": "images\/portraits\/Chara_Square_Thumbnail_401101.webp"
+    },
+    {
+      "hash": "sha256-Z8R8SKIJn+MBJ9yWNmfXLuO4Jlmhqv8FMB4Q6K52O3U=",
+      "url": "images\/portraits\/Square #15637.webp"
+    },
+    {
+      "hash": "sha256-Z8R8SKIJn+MBJ9yWNmfXLuO4Jlmhqv8FMB4Q6K52O3U=",
+      "url": "images\/portraits\/Square_15637.webp"
+    },
+    {
+      "hash": "sha256-NTYA7BruHa\/5pki76xlOAqYTYZ8\/dujNZ\/3CyjUQNg8=",
+      "url": "images\/portraits\/Square_6_updated.webp"
+    },
+    {
+      "hash": "sha256-cLoto+n46Y5cF7JT95GJKe\/ZoaenoGJN2H4qKasttw8=",
+      "url": "images\/portraits\/Square_7_updated.webp"
     },
     {
       "hash": "sha256-vR77+Fr8TzAi+eDp5uGlTnukXBomo8VcwluaJbAA0Kc=",
@@ -181,7 +513,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-XNGQLCdQ8zhwQ\/vFyBpRHuVICRrAtXLRppRjpSVUooI=",
+      "hash": "sha256-dsLTpUkViCp97nT1V\/JjZVNfe0Osvm30NeyGGltVO18=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -201,23 +533,31 @@
       "url": "_framework\/Blazored.LocalStorage.dll"
     },
     {
-      "hash": "sha256-2fIOMcofcTD79bMlhIbypqv8Y8LR4S186sVKfF9x\/G8=",
+      "hash": "sha256-qvtWokGnBFgmrd9APgLklapMvsidYoiRWHz0dv3\/lrw=",
       "url": "_framework\/Blazorise.Bootstrap5.dll"
     },
     {
-      "hash": "sha256-lFAyoQMbG6wYjkqrAfGKy67hCXgzVQCLqTd0p8MpA8k=",
+      "hash": "sha256-kF1rH3lbiXWuzoLOr\/aDSV7bffqBw0XnaEI6FWUsNpg=",
+      "url": "_framework\/Blazorise.Components.dll"
+    },
+    {
+      "hash": "sha256-qI464hcqQqatMJVUIST+EHRvLXi5JL42PC7Dm4bSies=",
       "url": "_framework\/Blazorise.dll"
     },
     {
-      "hash": "sha256-IwmS50qFTSMp0xkQLNN9INhPgXh4dRpjVZIb6SrmIKU=",
+      "hash": "sha256-PF8+sxXUGazEiebynh4tR9hXabaRw7yViB5JlKzyYnY=",
       "url": "_framework\/Blazorise.Icons.FontAwesome.dll"
     },
     {
-      "hash": "sha256-+h8eDzahBSfcLDSGfZqIFPCl5PhOj92lfdG7jMoubU0=",
+      "hash": "sha256-TPRqRH0elr6ecJRhBn2RULBio\/Lhfkflb3t6Z1VCQaE=",
+      "url": "_framework\/Blazorise.Snackbar.dll"
+    },
+    {
+      "hash": "sha256-IpjN6e6u\/8g\/WxBYANMBmjrbRu1YVkb+b\/s6Lg\/ZORg=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
-      "hash": "sha256-u9CevqaApuKCSeCvMoVA20x77x0vjnp4lGnSF\/joA5M=",
+      "hash": "sha256-um7\/+PJZUXfBQVp0qqFFguAZR6X0hoZonP2T7UHJW+c=",
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
@@ -225,7 +565,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
-      "hash": "sha256-RzG14vnfPy271SUFRkhdaFMJaVtGoKPEfppnzsewH4I=",
+      "hash": "sha256-iZmtitZAOoGa0H\/MrjodoFpS7RSqgj2A4P85QscwI4c=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -329,15 +669,15 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-wYJaAC8nohmAwy4\/BxRD8MqfY+zUksJoTbXdbF4NeBU=",
+      "hash": "sha256-0j3E4pgKWTU1E1ysFrqUlys9zvrMEWl8uCFdNXc7GSA=",
       "url": "_framework\/System.Linq.dll"
     },
     {
-      "hash": "sha256-vvS0VRUOQnagWRLhPAOApmnPySCcrTThbTyhpAQPW6U=",
+      "hash": "sha256-r3QKd55KXVc0lbJ2AFfHTogWbzAZSv9bNwPcVoUDACI=",
       "url": "_framework\/System.Linq.Expressions.dll"
     },
     {
-      "hash": "sha256-kkq\/hGrYcAsN1O+lewq+vAJ+kEB64bcMPuarxJ0ut+U=",
+      "hash": "sha256-2A5\/xGXwZ7dKQSuLGG6PHwIRQTKTDF+cf1BNWoxFpYI=",
       "url": "_framework\/System.Linq.Queryable.dll"
     },
     {
@@ -357,11 +697,11 @@
       "url": "_framework\/System.Net.Primitives.dll"
     },
     {
-      "hash": "sha256-YIMqqehp7\/KBEO\/scd7nB6X2Y0AWMAzayMgolnYtb6M=",
+      "hash": "sha256-AHYxMJCT61bRcCsVkhbHpRcewGnSJY63BwJ2xNZy8QE=",
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-KXP7xSklX5uSE7AJ3+THTQ9Vl7+ZTjWEzfqChLB7Qig=",
+      "hash": "sha256-xIqsDok4NzWG6XTTRBRA1Z6R3Q1i0FhqNfBAW5U9BNo=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -377,7 +717,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-IeHCyA3k1gPSs0N+ZG2GbGLBtp5hg5E1A6652sEeZcA=",
+      "hash": "sha256-Fe+1sugcGTxWc2CET+JaVr8bV16eEmtlmxqGHgCxQd8=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -389,7 +729,7 @@
       "url": "_framework\/System.Text.Encodings.Web.dll"
     },
     {
-      "hash": "sha256-wAH0AUAiFJIc3ReOeqDLQo8csxNib7SSsmUEvBoc\/mo=",
+      "hash": "sha256-SNhWY0semRZ9wecSG3wOQB1DEzbHoCEOrWIk+uChoFo=",
       "url": "_framework\/System.Text.Json.dll"
     },
     {
@@ -405,20 +745,24 @@
       "url": "LostWordTracker.styles.css"
     },
     {
-      "hash": "sha256-F6gFcAZ2e84TN885gMPeTFO598bGyzi4+7PMIBsT\/wo=",
+      "hash": "sha256-Am03NN5rQP\/vVHVHBOz4JAI3opdNTGQc04gMGfbdSpg=",
       "url": "_content\/Blazorise.Bootstrap5\/blazorise.bootstrap5.css"
     },
     {
-      "hash": "sha256-g3f2go183qbOiuraGpZHekELciWYTvdU34VCDYGmGm0=",
+      "hash": "sha256-TL3SJLHBamzizO9G2JLbr\/2X\/XWf0c\/ZsvN6YbVrd2Q=",
       "url": "_content\/Blazorise.Bootstrap5\/blazorise.bootstrap5.min.css"
     },
     {
-      "hash": "sha256-l0hSoS5fioQvwjrAtPSP8TyPqQaUROanRJMKgrza6wc=",
+      "hash": "sha256-4NMlswGHAATk3qmUG3dKLOWk8eX6udSPO+C7QG6OlnQ=",
       "url": "_content\/Blazorise.Bootstrap5\/modal.js"
     },
     {
-      "hash": "sha256-xoFOhrnCt1lbfnCn9YyCJC2lYVo6MeabHSxEAEF\/fQo=",
+      "hash": "sha256-HnfyYa8\/eB8\/jQEPHkhbdQP0BAg7otnZ+xgF2QtqSCA=",
       "url": "_content\/Blazorise.Bootstrap5\/tooltip.js"
+    },
+    {
+      "hash": "sha256-4wK\/OeA1ZFQKE\/JPFGExUepu7qgk6jpmlSOzXdBFwyY=",
+      "url": "_content\/Blazorise.Snackbar\/blazorise.snackbar.css"
     },
     {
       "hash": "sha256-qy9+ctRx974Nv13J0GAyw7zYN5kmSCafW0UZYFQhiAU=",
@@ -429,7 +773,7 @@
       "url": "_content\/Blazorise\/breakpoint.js"
     },
     {
-      "hash": "sha256-POgStrtb1K0xyyogI4xbpuM2G21i1CPxzYQWavDWuXE=",
+      "hash": "sha256-oL8omSrnnbC6gnsjWTLvg3d8+b391y0nsbp2rlw5CeE=",
       "url": "_content\/Blazorise\/button.js"
     },
     {
@@ -437,27 +781,27 @@
       "url": "_content\/Blazorise\/closable.js"
     },
     {
-      "hash": "sha256-4ZhZ+WUj+JlhusW4Qvu5sptSMJ3mDIb\/b9p52XG5pWw=",
+      "hash": "sha256-BQCGFfG0oY+M4U9Zfz1vETVv+wSZI4YdRjy8ItZ7gXI=",
       "url": "_content\/Blazorise\/colorPicker.js"
     },
     {
-      "hash": "sha256-Yw5ysz\/G0X0mujJoRI+iknKkzny73Cys+13EecYQCAU=",
+      "hash": "sha256-IKn\/0iqRlq1A4HWSFX5IE9Kd6zEUUBPQZiCUzu5qpSQ=",
       "url": "_content\/Blazorise\/datePicker.js"
     },
     {
-      "hash": "sha256-mDuNk9UpokFifvqGfrsAvzgIAUrROrIE2i5yUJgh0h0=",
+      "hash": "sha256-jDSchTt26yS\/XAniJC2E5+dtnSjs744m0tk5N72gw0Y=",
       "url": "_content\/Blazorise\/dragDrop.js"
     },
     {
-      "hash": "sha256-bdjvyYSPZrNRyM\/K9zfQLTnYEsRVvbqan10Z+f6kocc=",
+      "hash": "sha256-ZY+GmneT44mp6AzaBSVwf2Od0HzS0DfTXh8flKRGEEg=",
       "url": "_content\/Blazorise\/dropdown.js"
     },
     {
-      "hash": "sha256-Ar43mF7ckBo2SMh7ZI\/O\/S8mr5qC+gdPg2AQWxj4vyE=",
+      "hash": "sha256-WVv\/DyfFTvA\/mYwA2A0nnHxjvkLZwErHlMM9m+ixjNk=",
       "url": "_content\/Blazorise\/fileEdit.js"
     },
     {
-      "hash": "sha256-SyGnpAlneiorgy0ul2ljlA0e9Kcks3quZUq6usX1g+4=",
+      "hash": "sha256-wE64ee3AV4fnZ68mp2ZMKav4ZvBoa256EtZsyluZVyQ=",
       "url": "_content\/Blazorise\/inputMask.js"
     },
     {
@@ -465,12 +809,16 @@
       "url": "_content\/Blazorise\/io.js"
     },
     {
-      "hash": "sha256-8uJpHrJAHibnFCdkuGA7fB0TScyDvQ2jz0PI6aPmKBc=",
+      "hash": "sha256-7EsTiRN7Y8AaCZgXK2DzMoFL\/C3Ro0\/AvrNz+EB5zwI=",
       "url": "_content\/Blazorise\/memoEdit.js"
     },
     {
-      "hash": "sha256-QyLR3j5wPCij1LP2XEv2poUU93l6JrDnW2\/zIRU5Gpc=",
+      "hash": "sha256-kVWCGeoGUfInaWlHZZ02EKM4NL2QmXwsEtIonmgO4Us=",
       "url": "_content\/Blazorise\/numericPicker.js"
+    },
+    {
+      "hash": "sha256-rZcFpV8eEkodcwDzIqIbOJJgVvpNccPX1TpseBPMF00=",
+      "url": "_content\/Blazorise\/observer.js"
     },
     {
       "hash": "sha256-dAtNzvjJS7V3UfGSC8RwUPWbJgVpNeh20JAQ6TjUIKU=",
@@ -481,11 +829,11 @@
       "url": "_content\/Blazorise\/select.js"
     },
     {
-      "hash": "sha256-ANV\/Za3tZfaXn8GENMq41ePMx62MXBWT2bXtiadHUHk=",
+      "hash": "sha256-ub178LSydH\/sc2QA5gb8fkEgnhdjquyTAbUXIr\/GcD8=",
       "url": "_content\/Blazorise\/table.js"
     },
     {
-      "hash": "sha256-V0hiu32tzYXV4neFPhT2IyUzhKG6q0cDwX40BUZ3gQI=",
+      "hash": "sha256-7IAcKQMhzeQ5u9PmlmQOXQk913mJFaTsmU6tyjZr8xI=",
       "url": "_content\/Blazorise\/textEdit.js"
     },
     {
@@ -493,11 +841,11 @@
       "url": "_content\/Blazorise\/theme.js"
     },
     {
-      "hash": "sha256-hyTzMRE+Fy\/aApS\/4VX5J3DTCFATvcH56gLLQ71iLW4=",
+      "hash": "sha256-q9vOyxcAt7ok9hxrpBbwVGeCTIDl+MfslzfotqwPFCU=",
       "url": "_content\/Blazorise\/timePicker.js"
     },
     {
-      "hash": "sha256-RHiWnIEzDyA+rFwfRKte3g\/FdgA9EDSjnxGdWmLrTjA=",
+      "hash": "sha256-bONQ+JIwDmE1GDWwXrAnGjJOtSrH1BSCFT0ScgYdYEQ=",
       "url": "_content\/Blazorise\/tooltip.js"
     },
     {
@@ -541,5 +889,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "fWRA+Ejd"
+  "version": "S1sTdnoo"
 };
