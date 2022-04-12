@@ -25,27 +25,23 @@
     </CardFooter>
 </Card>
 
+<Switch TValue="bool" @bind-Checked="@_showOnlyObtained">Show only obtained</Switch>
 
-<CardDeck ColumnSize="ColumnSize.Is5">
+
     @if (_characterDefinitions != null)
     {
+        <div class="characterContainer">
 
         <Repeater Items="_characterDefinitions.CharacterStorage" TItem="CharacterStorage">
             @{
                 var currentCharData = _characterDefinitions.Characters[context.Id];
             }
-            <Card>
-                <CardBody>
-                    <CardTitle>@currentCharData.Name</CardTitle>
-                    <Figure Size="FigureSize.Is64x64">
-                        <FigureImage Source="@MakePathString(currentCharData.Portrait)" />
-                    </Figure>
-                    @*<CardImage Source="@currentCharData.Portrait" >
-
-                        </CardImage>*@
-                    <CardText>
-                        <Badge>@currentCharData.Universe</Badge>
-                        @switch (@currentCharData.Tier)
+            <div class="@((_showOnlyObtained ? context.Obtained ? "character" : "hide" : "character"))">
+                
+                <img class="portrait" src="@MakePathString(currentCharData.Portrait)" />
+                <div class="characterName">@currentCharData.Name</div>
+                <Badge>@currentCharData.Universe</Badge>
+                @switch (@currentCharData.Tier)
                         {
                             case "EX":
                                 <Badge Color="Color.Warning">EX</Badge>
@@ -72,26 +68,19 @@
                                 <Badge Color="Color.Danger">D</Badge>
                                 break;
                         }
-                        <Check @bind-Checked="@context.Obtained">Obtained</Check>
-                        <Addons>
-                            <Addon AddonType="AddonType.Start">
-                                <AddonLabel>LB</AddonLabel>
-                            </Addon>
-                            <Addon AddonType="AddonType.Body">
-                                <Rating Color="Color.Primary" @bind-SelectedValue="@context.LimitBreak" MaxValue="5"></Rating>
-                            </Addon>
-                        </Addons>
-                    </CardText>
-                    <CardFooter>
-                        <Button Color="Color.Primary" Clicked="@(e => @Mark(context))">Mark</Button>
-                    </CardFooter>
-                </CardBody>
-            </Card>
+                  <Check @bind-Checked="@context.Obtained">Obtained</Check>
+                  <div class="characterData1">
+                    <Rating Color="Color.Primary" @bind-SelectedValue="@context.LimitBreak" MaxValue="5"></Rating>
+                  </div>
+            </div>
+            
+            
         </Repeater>
+        </div>
     }
 
 
-</CardDeck>
+
 
 @code {
 
@@ -104,6 +93,8 @@
     //private ObservableCollection<Character> _characters { get; set; }
 
     private string _importData = "";
+
+    private bool _showOnlyObtained = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -136,5 +127,10 @@
     public async Task Export()
     {
         _importData = _dataService.Export(_characterDefinitions);
+    }
+
+    public async Task ToggleView()
+    {
+        _showOnlyObtained = !_showOnlyObtained;
     }
 }

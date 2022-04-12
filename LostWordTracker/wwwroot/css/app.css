@@ -48,3 +48,41 @@ a, .btn-link {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+
+/* --------------------------------------- */
+
+.characterContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.character {
+    /*display: flex;
+    flex-flow: column nowrap;*/
+    
+    flex-grow: 1;
+}
+
+.characterData1 {
+   
+   /* display: flex;
+    flex-flow: row nowrap;*/
+}
+
+.portrait {
+    width: 100px;
+    height: 100px;
+}
+
+.characterName {
+    max-width: 120px;
+    /*overflow-wrap: break-word;*/
+}
+
+.hide {
+    display: none;
+}
