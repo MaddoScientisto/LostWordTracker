@@ -5,5 +5,6 @@
         public int Id { get; set; }        
         public bool Obtained { get; set; }
         public int Level { get; set; }
+        public int LimitBreak { get; set; }
     }
 }

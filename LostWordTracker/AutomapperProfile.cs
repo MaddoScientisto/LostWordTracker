@@ -9,7 +9,7 @@ namespace LostWordTracker
         {
             CreateMap<CharacterStorage, Character>();
             CreateMap<Character, CharacterStorage>();
-            CreateMap<CharacterDefinition, Character>();            
+            CreateMap<CharacterDefinition, Character>();
         }
     }
 }
