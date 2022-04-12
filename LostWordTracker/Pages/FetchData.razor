@@ -1,55 +1,179 @@
-﻿@page "/fetchdata"
+﻿@page "/edit"
+@using LostWordTracker.Data
+@using System.Collections.ObjectModel
+@using LostWordTracker.Services
+@using System.Text.Json
 @inject HttpClient Http
+@inject Blazored.LocalStorage.ILocalStorageService _localStorage
+@inject IDataService _dataService
 
-<h1>Weather forecast</h1>
+<h1>Edit</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<Button Color="Color.Primary" Clicked="@AddPressed">Add</Button>
 
-@if (forecasts == null)
+<Button Color="Color.Primary" Clicked="@ExportJson">Export JSON</Button>
+
+@if (_characters != null && _characters.Count > 0)
 {
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+    <CardDeck>
+        <Repeater Items="_characters" TItem="CharacterDefinition">
 
-@code {
-    private WeatherForecast[] forecasts;
+            <Card>
+                <CardHeader>@context.Id @context.Name</CardHeader>
+                <CardBody>
+                    <Field>
+                        <FieldLabel>Id</FieldLabel>
+                        <NumericEdit @bind-Value="@context.Id"></NumericEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Name</FieldLabel>
+                        <TextEdit @bind-Text="@context.Name"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Universe</FieldLabel>
+                        <TextEdit @bind-Text="@context.Universe"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Tier</FieldLabel>
+                        <TextEdit @bind-Text="@context.Tier"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Portrait</FieldLabel>
+                        <TextEdit @bind-Text="@context.Portrait"></TextEdit>
+                    </Field>
 
-    protected override async Task OnInitializedAsync()
+                </CardBody>
+            </Card>
+        </Repeater>
+    </CardDeck>
+    <Button Color="Color.Primary" Clicked="@AddPressed">Add</Button>
+
+    <Button Color="Color.Primary" Clicked="@ExportJson">Export JSON</Button>
+
+    @if (_characterToAdd != null)
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        <Modal @ref="modalRef">
+            <ModalContent Centered>
+                <ModalHeader>
+                    <ModalTitle>Character edit</ModalTitle>
+                    <CloseButton />
+                </ModalHeader>
+                <ModalBody>
+                    <Field>
+                        <FieldLabel>Id</FieldLabel>
+                        <NumericEdit @bind-Value="@_characterToAdd.Id"></NumericEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Name</FieldLabel>
+                        <TextEdit @bind-Text="@_characterToAdd.Name"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Universe</FieldLabel>
+                        <TextEdit @bind-Text="@_characterToAdd.Universe"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Tier</FieldLabel>
+                        <TextEdit @bind-Text="@_characterToAdd.Tier"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Portrait</FieldLabel>
+                        <TextEdit @bind-Text="@_characterToAdd.Portrait"></TextEdit>
+                    </Field>
+                </ModalBody>
+                <ModalFooter>
+                    <Button Color="Color.Secondary" Clicked="@HideModal">Close</Button>
+                    <Button Color="Color.Primary" Clicked="@SaveNewChar">Save Changes</Button>
+                </ModalFooter>
+            </ModalContent>
+        </Modal>
     }
 
-    public class WeatherForecast
+
+    <Modal @ref="jsonModalRef">
+        <ModalContent Centered>
+            <ModalHeader>
+                <ModalTitle>JSON Export</ModalTitle>
+                <CloseButton />
+            </ModalHeader>
+            <ModalBody>
+
+                <Field>
+                    <FieldLabel>JSON</FieldLabel>
+                    <MemoEdit @bind-Text="@_jsonToExport" AutoSize></MemoEdit>
+                </Field>
+
+            </ModalBody>
+            <ModalFooter>
+                <Button Color="Color.Secondary" Clicked="@HideJsonModal">Close</Button>
+
+            </ModalFooter>
+        </ModalContent>
+    </Modal>
+
+
+}
+
+
+
+@code {
+    private Modal modalRef;
+    private Modal jsonModalRef;
+    //private CharacterDefinitions _characterDefinitions;
+
+    private ObservableCollection<CharacterDefinition> _characters { get; set; } = new();
+
+    private CharacterDefinition _characterToAdd;
+
+    private string _jsonToExport = "";
+    protected override async Task OnInitializedAsync()
     {
-        public DateTime Date { get; set; }
 
-        public int TemperatureC { get; set; }
+        var characterDefinitions = await _dataService.GetCharactersData();
+        _characters = new(characterDefinitions.Characters.Values.ToArray());
+        MakeNewCharacter();
+    }
 
-        public string Summary { get; set; }
+    private void MakeNewCharacter()
+    {
+        _characterToAdd = new CharacterDefinition() { Id = _characters.Count() + 1 };
+    }
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    private async Task AddPressed()
+    {
+        MakeNewCharacter();
+        await modalRef.Show();
+    }
+
+    private async Task HideModal()
+    {
+        await modalRef.Hide();
+    }
+
+    private async Task SaveNewChar()
+    {
+        // TODO Save
+
+        _characters.Add(_characterToAdd);
+
+        await modalRef.Hide();
+    }
+
+    private async Task ExportJson()
+    {
+        var dic = _characters.ToDictionary(x => x.Id);
+
+        var objectToConvert = new
+        {
+            Characters = dic
+        };
+
+        _jsonToExport = JsonSerializer.Serialize(objectToConvert, new JsonSerializerOptions { WriteIndented = true });
+
+        await jsonModalRef.Show();
+    }
+
+    private async Task HideJsonModal()
+    {
+        await jsonModalRef.Hide();
     }
 }

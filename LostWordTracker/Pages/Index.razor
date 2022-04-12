@@ -6,7 +6,7 @@
 @inject Blazored.LocalStorage.ILocalStorageService _localStorage
 @inject IDataService _dataService
 
-<p>ok let's go</p>
+
 <Card>
     <CardHeader>Save/Load to Local Storage</CardHeader>
     <CardBody>
@@ -35,11 +35,41 @@
             <Card>
                 <CardBody>
                     <CardTitle>@currentCharData.Name</CardTitle>
-                    <CardImage Source="@currentCharData.Portrait">
+                    <Figure Size="FigureSize.Is32x32">
+                        <FigureImage Source="@MakePathString(currentCharData.Portrait)" />
+                    </Figure>
+                    @*<CardImage Source="@currentCharData.Portrait" >
 
-                    </CardImage>
-                    <CardText>
-                        @currentCharData.Universe
+                    </CardImage>*@
+                    <CardText>                        
+                        <Badge >@currentCharData.Universe</Badge>
+                        @switch (@currentCharData.Tier)
+                        {
+                            case "EX":
+                            <Badge Color="Color.Warning">EX</Badge>
+                            break;
+                            case "S+":
+                            <Badge Color="Color.Success">S+</Badge>
+                            break;
+                            case "S":
+                            <Badge Color="Color.Info">S</Badge>
+                            break;
+                            case "A+":
+                            <Badge Color="Color.Primary">A+</Badge>
+                            break;
+                            case "A":
+                            <Badge Color="Color.Dark">A</Badge>
+                            break;
+                            case "B":
+                            <Badge Color="Color.Secondary">B</Badge>
+                            break;
+                            case "C":
+                            <Badge Color="Color.Light">C</Badge>
+                            break;
+                            case "D":
+                            <Badge Color="Color.Danger">D</Badge>
+                            break;
+                        }
                         <Check @bind-Checked="@context.Obtained">Obtained</Check>
                     </CardText>
                     <CardFooter>
@@ -54,6 +84,12 @@
 </CardDeck>
 
 @code {
+
+    private string MakePathString(string value)
+    {
+        return $"images/portraits/{value}";
+    }
+
     private CharacterDefinitions _characterDefinitions;
     //private ObservableCollection<Character> _characters { get; set; }
 

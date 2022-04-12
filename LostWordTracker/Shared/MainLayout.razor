@@ -1,12 +1,27 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
+    @*<div class="sidebar">
         <NavMenu />
-    </div>
+    </div>*@
 
     <div class="main">
         <div class="top-row px-4">
+
+            <Bar Breakpoint="Breakpoint.Desktop" Background="Background.Light" ThemeContrast="ThemeContrast.Light">
+    <BarBrand>LostWord Tracker</BarBrand>
+    <BarMenu>
+        <BarStart>
+            <BarItem>
+                <BarLink To="/">Home</BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink To="/edit">Edit</BarLink>
+            </BarItem>
+        </BarStart>
+    </BarMenu>
+</Bar>
+
            @* <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>*@
         </div>
 

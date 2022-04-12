@@ -1,11 +1,24 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿<Bar Breakpoint="Breakpoint.Desktop" Background="Background.Light" ThemeContrast="ThemeContrast.Light">
+    <BarBrand>LostWord Tracker</BarBrand>
+    <BarMenu>
+        <BarStart>
+            <BarItem>
+                <BarLink To="#home">Home</BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink To="#edit">Edit</BarLink>
+            </BarItem>
+        </BarStart>
+    </BarMenu>
+</Bar>
+@*<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">LostWordTracker</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
-</div>
+</div>*@
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+@*<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
@@ -23,7 +36,7 @@
             </NavLink>
         </li>
     </ul>
-</div>
+</div>*@
 
 @code {
     private bool collapseNavMenu = true;
