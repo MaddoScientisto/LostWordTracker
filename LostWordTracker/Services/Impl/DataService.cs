@@ -92,7 +92,8 @@ namespace LostWordTracker.Services.Impl
                 {
                     Id = character.Key,
                     Level = loadedChar.Level,
-                    Obtained = loadedChar.Obtained
+                    Obtained = loadedChar.Obtained,
+                    LimitBreak = loadedChar.LimitBreak                   
                 });
             }
 
