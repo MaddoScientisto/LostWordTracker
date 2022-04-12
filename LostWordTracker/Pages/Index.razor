@@ -26,16 +26,16 @@
 </Card>
 
 
-<CardDeck>
+<CardDeck >
     @if (_characterDefinitions != null)
     {
    
         <Repeater Items="_characterDefinitions.CharacterStorage" TItem="CharacterStorage">
             @{ var currentCharData = _characterDefinitions.Characters[context.Id];}
-            <Card>
+            <Card >
                 <CardBody>
                     <CardTitle>@currentCharData.Name</CardTitle>
-                    <Figure Size="FigureSize.Is32x32">
+                    <Figure Size="FigureSize.Is64x64">
                         <FigureImage Source="@MakePathString(currentCharData.Portrait)" />
                     </Figure>
                     @*<CardImage Source="@currentCharData.Portrait" >

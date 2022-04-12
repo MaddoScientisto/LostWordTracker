@@ -30,6 +30,10 @@
                         <TextEdit @bind-Text="@context.Name"></TextEdit>
                     </Field>
                     <Field>
+                        <FieldLabel>Obtain Type</FieldLabel>
+                        <TextEdit @bind-Text="@context.ObtainType"></TextEdit>
+                    </Field>
+                    <Field>
                         <FieldLabel>Universe</FieldLabel>
                         <TextEdit @bind-Text="@context.Universe"></TextEdit>
                     </Field>
@@ -38,8 +42,23 @@
                         <TextEdit @bind-Text="@context.Tier"></TextEdit>
                     </Field>
                     <Field>
+                        <FieldLabel>FarmTier</FieldLabel>
+                        <TextEdit @bind-Text="@context.FarmTier"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>CqTier</FieldLabel>
+                        <TextEdit @bind-Text="@context.CqTier"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Tier Rank</FieldLabel>
+                        <NumericEdit @bind-Value="@context.TierRank"></NumericEdit>
+                    </Field>
+                    <Field>
                         <FieldLabel>Portrait</FieldLabel>
                         <TextEdit @bind-Text="@context.Portrait"></TextEdit>
+                        <Figure Size="FigureSize.Is16x16">
+                            <FigureImage Source="@MakePathString(context.Portrait)" />
+                        </Figure>
                     </Field>
 
                 </CardBody>
@@ -64,16 +83,117 @@
                         <NumericEdit @bind-Value="@_characterToAdd.Id"></NumericEdit>
                     </Field>
                     <Field>
+                        <FieldLabel>Search</FieldLabel>
+                        <Autocomplete TItem="CharacterDefinition"
+                              TValue="string"
+                              Data="@_characters"
+                              TextField="@((item) => item.Name)"
+                              ValueField="@((item) => item.Name)"
+                              Filter="AutocompleteFilter.StartsWith"
+                              FreeTyping>
+                        </Autocomplete>
+                    </Field>
+
+                    <Field>
                         <FieldLabel>Name</FieldLabel>
-                        <TextEdit @bind-Text="@_characterToAdd.Name"></TextEdit>
+                        <TextEdit @bind-Text="@_characterToAdd.Name" Immediate="false"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Obtain Type</FieldLabel>
+                        <Select @bind-SelectedValue="@_characterToAdd.ObtainType">
+                            <SelectItem Value="string.Empty"></SelectItem>
+                            <SelectItem Value="@("Pray")">Pray</SelectItem>
+                            <SelectItem Value="@("Fes")">Fes</SelectItem>
+                            <SelectItem Value="@("Sfes")">Sfes</SelectItem>
+
+
+                        </Select>
+                        <TextEdit @bind-Text="@_characterToAdd.ObtainType"></TextEdit>
                     </Field>
                     <Field>
                         <FieldLabel>Universe</FieldLabel>
+                        <Select @bind-SelectedValue="@_characterToAdd.Universe">
+                            <SelectItem Value="string.Empty"></SelectItem>
+                            <SelectItem Value="@("L1")">L1</SelectItem>
+                            <SelectItem Value="@("A6")">A6</SelectItem>
+                            <SelectItem Value="@("A7")">A7</SelectItem>
+                            <SelectItem Value="@("A8")">A8</SelectItem>
+                            <SelectItem Value="@("A9")">A9</SelectItem>
+                            <SelectItem Value="@("A10")">A10</SelectItem>
+                            <SelectItem Value="@("A11")">A11</SelectItem>
+                            <SelectItem Value="@("A12")">A12</SelectItem>
+                            <SelectItem Value="@("B2")">B2</SelectItem>
+                            <SelectItem Value="@("B3")">B3</SelectItem>
+                            <SelectItem Value="@("R2")">R2</SelectItem>
+                            <SelectItem Value="@("R8")">R8</SelectItem>
+                            <SelectItem Value="@("Z1")">Z1</SelectItem>
+                        </Select>
                         <TextEdit @bind-Text="@_characterToAdd.Universe"></TextEdit>
+                    </Field>
+
+                    <Field>
+                        <FieldLabel>FarmTier</FieldLabel>
+                        <Select @bind-SelectedValue="@_characterToAdd.FarmTier">
+                            <SelectItem Value="string.Empty"></SelectItem>
+                            <SelectItem Value="@("EX")">EX</SelectItem>
+                            <SelectItem Value="@("S+")">S+</SelectItem>
+                            <SelectItem Value="@("S")">S</SelectItem>
+                            <SelectItem Value="@("A+")">A+</SelectItem>
+                            <SelectItem Value="@("A")">A</SelectItem>
+                            <SelectItem Value="@("B+")">B+</SelectItem>
+                            <SelectItem Value="@("B")">B</SelectItem>
+                            <SelectItem Value="@("B-")">B</SelectItem>
+                            <SelectItem Value="@("C+")">C+</SelectItem>
+                            <SelectItem Value="@("C")">C</SelectItem>
+                            <SelectItem Value="@("C-")">C-</SelectItem>
+                            <SelectItem Value="@("D")">D</SelectItem>
+                            <SelectItem Value="@("E")">E</SelectItem>
+                        </Select>
+                        <TextEdit @bind-Text="@_characterToAdd.FarmTier"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>CqTier</FieldLabel>
+                        <Select @bind-SelectedValue="@_characterToAdd.CqTier">
+                            <SelectItem Value="string.Empty"></SelectItem>
+                            <SelectItem Value="@("EX")">EX</SelectItem>
+                            <SelectItem Value="@("S+")">S+</SelectItem>
+                            <SelectItem Value="@("S")">S</SelectItem>
+                            <SelectItem Value="@("A+")">A+</SelectItem>
+                            <SelectItem Value="@("A")">A</SelectItem>
+                            <SelectItem Value="@("B+")">B+</SelectItem>
+                            <SelectItem Value="@("B")">B</SelectItem>
+                            <SelectItem Value="@("B-")">B</SelectItem>
+                            <SelectItem Value="@("C+")">C+</SelectItem>
+                            <SelectItem Value="@("C")">C</SelectItem>
+                            <SelectItem Value="@("C-")">C-</SelectItem>
+                            <SelectItem Value="@("D")">D</SelectItem>
+                            <SelectItem Value="@("E")">E</SelectItem>
+                        </Select>
+                        <TextEdit @bind-Text="@_characterToAdd.CqTier"></TextEdit>
                     </Field>
                     <Field>
                         <FieldLabel>Tier</FieldLabel>
+                        <Select @bind-SelectedValue="@_characterToAdd.Tier">
+                            <SelectItem Value="string.Empty"></SelectItem>
+                            <SelectItem Value="@("EX")">EX</SelectItem>
+                            <SelectItem Value="@("S+")">S+</SelectItem>
+                            <SelectItem Value="@("S")">S</SelectItem>
+                            <SelectItem Value="@("A+")">A+</SelectItem>
+                            <SelectItem Value="@("A")">A</SelectItem>
+                            <SelectItem Value="@("B+")">B+</SelectItem>
+                            <SelectItem Value="@("B")">B</SelectItem>
+                            <SelectItem Value="@("B-")">B</SelectItem>
+                            <SelectItem Value="@("C+")">C+</SelectItem>
+                            <SelectItem Value="@("C")">C</SelectItem>
+                            <SelectItem Value="@("C-")">C-</SelectItem>
+                            <SelectItem Value="@("D")">D</SelectItem>
+                            <SelectItem Value="@("E")">E</SelectItem>
+                        </Select>
                         <TextEdit @bind-Text="@_characterToAdd.Tier"></TextEdit>
+                    </Field>
+                    <Field>
+                        <FieldLabel>Tier Rank</FieldLabel>
+                        <NumericEdit @bind-Value="@_characterToAdd.TierRank"></NumericEdit>
                     </Field>
                     <Field>
                         <FieldLabel>Portrait</FieldLabel>
@@ -133,9 +253,18 @@
         MakeNewCharacter();
     }
 
+    private string MakePathString(string value)
+    {
+        return $"images/portraits/{value}";
+    }
+
     private void MakeNewCharacter()
     {
-        _characterToAdd = new CharacterDefinition() { Id = _characters.Count() + 1 };
+        _characterToAdd = new CharacterDefinition()
+            {
+                Id = _characters.Count() + 1,
+                TierRank = 1
+            };
     }
 
     private async Task AddPressed()
