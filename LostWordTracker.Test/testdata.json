@@ -1,0 +1,26 @@
+{
+  "Characters": {
+    "1": {
+      "Id": 1,
+      "Name": "Reimu Hakurei",
+      "Universe": "L1",
+      "Portrait": "100101_Reimu_Hakurei_SQ.webp",
+      "Tier": "S",
+      "TierRank": 0,
+      "FarmTier": "A",
+      "CqTier": "S",
+      "ObtainType": "Prayer"
+    },
+    "2": {
+      "Id": 2,
+      "Name": "Marisa Kirisame",
+      "Universe": "L1",
+      "Portrait": "100201_Marisa_Kirisame_SQ.webp",
+      "Tier": "C",
+      "TierRank": 0,
+      "FarmTier": "B",
+      "CqTier": "C",
+      "ObtainType": "Prayer"
+    }
+  }
+}
