@@ -1110,6 +1110,17 @@
       "FarmTier": "B",
       "CqTier": "S",
       "ObtainType": "Pray"
+    },
+    "102": {
+      "Id": 102,
+      "Name": "Sagume Kishin (space whatever)",
+      "Universe": "B3",
+      "Portrait": null,
+      "Tier": null,
+      "TierRank": 1,
+      "FarmTier": null,
+      "CqTier": null,
+      "ObtainType": "Sfes"
     }
   }
 }

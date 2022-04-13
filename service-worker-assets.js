@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-EUHR\/GuLo5rzD411jmCWk5z7s\/EEYP+znI6HohmJ4Ic=",
+      "hash": "sha256-M7gmz0ZuKUPKWdvwrA6cn6fhy5Pr2QaAViJtyljFMns=",
       "url": "Characters.json"
     },
     {
@@ -513,7 +513,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-YKGQTSqPMK5AxPjUPicvVpGcQOVytweP5NhAHGfZx7E=",
+      "hash": "sha256-s9LgvWyB\/PTfUUT1VdZBS+qIWh8neeOoJ6WVBokEdgQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -553,7 +553,11 @@
       "url": "_framework\/Blazorise.Snackbar.dll"
     },
     {
-      "hash": "sha256-uhKgS75hlA9w1pciZggLJmTNVTiAR3zWZdyzybYB7eM=",
+      "hash": "sha256-SMkd2IAw3EMudbx5yA\/cMfghFljUvZVCaKvYBkNJU1I=",
+      "url": "_framework\/LostWordTracker.Core.dll"
+    },
+    {
+      "hash": "sha256-RIHypVXpbkOEhFloPCeP6JiYKPkTPhT3qwWSWwE7DYA=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -665,6 +669,10 @@
       "url": "_framework\/System.Drawing.Primitives.dll"
     },
     {
+      "hash": "sha256-NKJjbusXuiYanbFKJCvLtr5qDi844s3zobl80\/G5ptU=",
+      "url": "_framework\/System.IO.Compression.dll"
+    },
+    {
       "hash": "sha256-5Moc25wH\/fVjaJDKux07zwi1TXdWrt3tlM0hQwgzvrM=",
       "url": "_framework\/System.IO.Pipelines.dll"
     },
@@ -701,7 +709,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-xIqsDok4NzWG6XTTRBRA1Z6R3Q1i0FhqNfBAW5U9BNo=",
+      "hash": "sha256-nxbMaRVW4eOAc7uFoOPzxyLtoGoLA5UIAASI8iXelU8=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -717,7 +725,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-Fe+1sugcGTxWc2CET+JaVr8bV16eEmtlmxqGHgCxQd8=",
+      "hash": "sha256-yNfzd0nAZrGKMj35paeYrhCez28x17QkQ01mrWCxXp4=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -889,5 +897,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "vuu2L1c2"
+  "version": "CiWDUOjI"
 };
