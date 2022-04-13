@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Text.Json;
 using System;
+using LostWordTracker.Core.Services;
 
 namespace LostWordTracker.Services.Impl
 {
     public class DataService : IDataService
     {
         private readonly System.Net.Http.HttpClient _httpClient;
-        private readonly Blazored.LocalStorage.ILocalStorageService _localStorage;
+        private readonly IGenericLocalStorageService _localStorage;
         private readonly IMapper _mapper;
-        public DataService(HttpClient httpClient, Blazored.LocalStorage.ILocalStorageService localStorage, IMapper mapper)
+        public DataService(HttpClient httpClient, IGenericLocalStorageService localStorage, IMapper mapper)
         {
             _httpClient = httpClient;
             _localStorage = localStorage;

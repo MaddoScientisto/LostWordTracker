@@ -5,6 +5,10 @@ VisualStudioVersion = 17.2.32317.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostWordTracker", "LostWordTracker\LostWordTracker.csproj", "{826AF409-9A86-4B1C-BC76-82ED3945CB5D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostWordTracker.Core", "LostWordTracker.Core\LostWordTracker.Core.csproj", "{CFF5AAB1-378F-4B41-BAE7-E100257DB78B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostWordTracker.Test", "LostWordTracker.Test\LostWordTracker.Test.csproj", "{AF715056-EDCE-4B36-972B-1FA574CFA23D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{826AF409-9A86-4B1C-BC76-82ED3945CB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{826AF409-9A86-4B1C-BC76-82ED3945CB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{826AF409-9A86-4B1C-BC76-82ED3945CB5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF5AAB1-378F-4B41-BAE7-E100257DB78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF5AAB1-378F-4B41-BAE7-E100257DB78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF5AAB1-378F-4B41-BAE7-E100257DB78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF5AAB1-378F-4B41-BAE7-E100257DB78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF715056-EDCE-4B36-972B-1FA574CFA23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF715056-EDCE-4B36-972B-1FA574CFA23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF715056-EDCE-4B36-972B-1FA574CFA23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF715056-EDCE-4B36-972B-1FA574CFA23D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
