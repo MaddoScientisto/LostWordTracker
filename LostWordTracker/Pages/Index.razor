@@ -121,12 +121,12 @@
 
     public async Task Import()
     {
-        _characterDefinitions = await _dataService.Import(_importData);
+        _characterDefinitions = await _dataService.ImportCompressed(_importData);
     }
 
     public async Task Export()
     {
-        _importData = _dataService.Export(_characterDefinitions);
+        _importData = _dataService.ExportCompressed(_characterDefinitions);
     }
 
     public async Task ToggleView()

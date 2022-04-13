@@ -11,8 +11,10 @@ namespace LostWordTracker.Services
         Task SaveData(CharacterDefinitions characters);
         Task<CharacterDefinitions> LoadData();
 
-        Task<CharacterDefinitions> Import(string data);
+        Task<CharacterDefinitions> ImportCompressed(string data);
+        Task<CharacterDefinitions> ImportRaw(string data);
 
-        string Export(CharacterDefinitions characters);
+        string ExportRaw(CharacterDefinitions characters);
+        string ExportCompressed(CharacterDefinitions characters);
     }
 }

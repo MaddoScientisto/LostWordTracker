@@ -150,12 +150,12 @@ namespace LostWordTracker.Test
         }
 
         [Test]
-        public async Task ImportExportData()
+        public async Task ImportExportDataRaw()
         {
             var dataService = _services.GetRequiredService<IDataService>();
 
             string dataString = "[{\"Id\":1,\"Obtained\":true,\"Level\":100,\"LimitBreak\":5},{\"Id\":2,\"Obtained\":false,\"Level\":0,\"LimitBreak\":0}]";
-            var data = await dataService.Import(dataString);
+            var data = await dataService.ImportRaw(dataString);
 
             data.Should().NotBeNull();
 
@@ -173,10 +173,46 @@ namespace LostWordTracker.Test
                 LimitBreak = 0
             });
 
-            var exportedData = dataService.Export(data);
+            var exportedData = dataService.ExportRaw(data);
             exportedData.Should().NotBeNull().And.BeEquivalentTo(dataString);
         }
 
-   
+        [Test]
+        public async Task ExportDataCompressed()
+        {
+            var dataService = _services.GetRequiredService<IDataService>();
+            var data = await dataService.GetCharactersData();
+            data.CharacterStorage[1].Obtained = true;
+            data.CharacterStorage[1].Level = 100;
+            data.CharacterStorage[1].LimitBreak = 5;
+            
+            var exportedData = dataService.ExportCompressed(data);
+
+            exportedData.Should().NotBeNullOrWhiteSpace().And.BeEquivalentTo("aAAAAB+LCAAAAAAAAAqKrlbyTFGyMtRR8k8qSczMSwVy0hJzilN1lHxSy1JzlKwMgKzM3MwSp6LUxGwgt1YHosUIWUtJUSlCh6EBmh7T2lgAAAAA//8=");
+        }
+
+        [Test]
+        public async Task ImportExportDataCompressed()
+        {
+            var dataService = _services.GetRequiredService<IDataService>();
+
+            string dataString = "aAAAAB+LCAAAAAAAAAqKrlbyTFGyMtRR8k8qSczMSwVy0hJzilN1lHxSy1JzlKwMgKzM3MwSp6LUxGwgt1YHosUIWUtJUSlCh6EBmh7T2lgAAAAA//8=";
+            var data = await dataService.ImportCompressed(dataString);
+
+            data.Should().NotBeNull();
+
+            data.CharacterStorage.Should().NotBeNullOrEmpty().And.ContainEquivalentOf(new CharacterStorage()
+            {
+                Id = 2,
+                Level = 100,
+                LimitBreak = 5,
+                Obtained = true
+            });
+
+            var exportedData = dataService.ExportCompressed(data);
+            exportedData.Should().NotBeNull().And.BeEquivalentTo(dataString);
+        }
+
+
     }
 }

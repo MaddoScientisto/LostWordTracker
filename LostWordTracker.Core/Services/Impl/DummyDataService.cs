@@ -10,7 +10,12 @@ namespace LostWordTracker.Core.Services.Impl
 {
     public class DummyDataService : IDataService
     {
-        public string Export(CharacterDefinitions characters)
+        public string ExportCompressed(CharacterDefinitions characters)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string ExportRaw(CharacterDefinitions characters)
         {
             throw new NotImplementedException();
         }
@@ -20,7 +25,12 @@ namespace LostWordTracker.Core.Services.Impl
             throw new NotImplementedException();
         }
 
-        public Task<CharacterDefinitions> Import(string data)
+        public Task<CharacterDefinitions> ImportCompressed(string data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<CharacterDefinitions> ImportRaw(string data)
         {
             throw new NotImplementedException();
         }
