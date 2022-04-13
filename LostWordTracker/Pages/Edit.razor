@@ -13,6 +13,8 @@
 
 <Button Color="Color.Primary" Clicked="@ExportJson">Export JSON</Button>
 
+<Button Color="Color.Danger" Clicked="@EnableAll">Enable All</Button>
+
 @if (_characters != null && _characters.Count > 0)
 {
     <CardDeck>
@@ -59,6 +61,9 @@
                         <Figure Size="FigureSize.Is16x16">
                             <FigureImage Source="@MakePathString(context.Portrait)" />
                         </Figure>
+                    </Field>
+                    <Field>                        
+                        <Switch TValue="bool" @bind-Checked="@context.Enabled" >Enabled</Switch>
                     </Field>
 
                 </CardBody>
@@ -304,5 +309,12 @@
     private async Task HideJsonModal()
     {
         await jsonModalRef.Hide();
+    }
+
+    private async Task EnableAll()
+    {
+        foreach(var character in _characters) {
+            character.Enabled = true;
+        }
     }
 }

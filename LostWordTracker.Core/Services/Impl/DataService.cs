@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using LostWordTracker.Data;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Json;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Text.Json;
@@ -15,21 +13,33 @@ namespace LostWordTracker.Services.Impl
 {
     public class DataService : IDataService
     {
-        private readonly System.Net.Http.HttpClient _httpClient;
+
         private readonly IGenericLocalStorageService _localStorage;
         private readonly IMapper _mapper;
-        public DataService(HttpClient httpClient, IGenericLocalStorageService localStorage, IMapper mapper)
+        private readonly IDatabaseService _databaseService;
+        private readonly IConfigurationService _config;
+
+        public DataService(IGenericLocalStorageService localStorage, IMapper mapper, IDatabaseService databaseService, IConfigurationService configurationService)
         {
-            _httpClient = httpClient;
             _localStorage = localStorage;
             _mapper = mapper;
+            _databaseService = databaseService;
+            _config = configurationService;
         }
 
+        /// <summary>
+        /// Loads the character definitions but without user data
+        /// </summary>
+        /// <returns></returns>
         public async Task<CharacterDefinitions> LoadCharacterDefinitions()
         {
-            return await _httpClient.GetFromJsonAsync<CharacterDefinitions>("Characters.json");
+            return await _databaseService.LoadCharacterDefinitions();
         }
 
+        /// <summary>
+        /// Loads both definitions and user data
+        /// </summary>
+        /// <returns></returns>
         public async Task<CharacterDefinitions> GetCharactersData()
         {
             var loadedCharacters = await LoadCharacterDefinitions();
@@ -115,7 +125,7 @@ namespace LostWordTracker.Services.Impl
         }
 
         public string ExportCompressed(CharacterDefinitions characters)
-        {           
+        {
             return CompressJson(ExportRaw(characters));
         }
 

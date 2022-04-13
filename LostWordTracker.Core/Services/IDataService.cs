@@ -6,7 +6,16 @@ namespace LostWordTracker.Services
 {
     public interface IDataService
     {
+        /// <summary>
+        /// Loads the character definitions but without user data
+        /// </summary>
+        /// <returns></returns>
         Task<CharacterDefinitions> LoadCharacterDefinitions();
+
+        /// <summary>
+        /// Loads both definitions and user data
+        /// </summary>
+        /// <returns></returns>
         Task<CharacterDefinitions> GetCharactersData();
         Task SaveData(CharacterDefinitions characters);
         Task<CharacterDefinitions> LoadData();

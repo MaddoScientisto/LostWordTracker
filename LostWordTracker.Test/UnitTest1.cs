@@ -17,6 +17,7 @@ using System.Net;
 using System.IO;
 using FluentAssertions;
 using System.Linq;
+using LostWordTracker.Test.Services;
 
 namespace LostWordTracker.Test
 {
@@ -37,37 +38,12 @@ namespace LostWordTracker.Test
         {
             var services = new ServiceCollection();
             services.AddScoped<IDataService, DataService>();
-            services.AddScoped<IGenericLocalStorageService, MemoryStorageService>();
+            services.AddSingleton<IGenericLocalStorageService, MemoryStorageService>();
 
-
-
-            var exampleData = new StringContent(File.ReadAllText("testdata.json"));
-
-            var handlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
-            handlerMock
-               .Protected()
-               // Setup the PROTECTED method to mock
-               .Setup<Task<HttpResponseMessage>>(
-                  "SendAsync",
-                  ItExpr.IsAny<HttpRequestMessage>(),
-                  ItExpr.IsAny<CancellationToken>()
-               )
-               // prepare the expected response of the mocked http call
-               .ReturnsAsync(new HttpResponseMessage()
-               {
-                   StatusCode = HttpStatusCode.OK,
-                   Content = exampleData,
-               })
-               .Verifiable();
-
-            var httpClient = new HttpClient(handlerMock.Object)
-            {
-                BaseAddress = new Uri("http://test.com/"),
-            };
-
-            services.AddSingleton<HttpClient>(httpClient);
-
+            services.AddScoped<IDatabaseService, FileSystemDatabaseService>();                       
             services.AddAutoMapper(typeof(AutomapperProfile));
+
+            services.AddSingleton<IConfigurationService, TestConfigurationService>();
 
             return services.BuildServiceProvider();
         }
@@ -78,13 +54,27 @@ namespace LostWordTracker.Test
 
             var dataService = _services.GetRequiredService<IDataService>();
 
-            //var mockedData = new Mock<IDataService>
-
             var characters = await dataService.LoadCharacterDefinitions();
 
             characters.Should().NotBeNull();
 
             characters.Characters.Should().NotBeNullOrEmpty().And.ContainKeys(new int[] { 1, 2 });
+
+            var exampleCharacter = new CharacterDefinition()
+            {
+                Id = 1,
+                Name = "Reimu Hakurei",
+                Universe = "L1",
+                Portrait = "100101_Reimu_Hakurei_SQ.webp",
+                Tier = "S",
+                TierRank = 0,
+                FarmTier = "A",
+                CqTier = "S",
+                ObtainType = "Prayer",
+                Enabled = true,
+            };
+
+            characters.Characters[1].Should().BeEquivalentTo(exampleCharacter);
 
             characters.CharacterStorage.Should().BeNull();
 
@@ -185,7 +175,7 @@ namespace LostWordTracker.Test
             data.CharacterStorage[1].Obtained = true;
             data.CharacterStorage[1].Level = 100;
             data.CharacterStorage[1].LimitBreak = 5;
-            
+
             var exportedData = dataService.ExportCompressed(data);
 
             exportedData.Should().NotBeNullOrWhiteSpace().And.BeEquivalentTo("aAAAAB+LCAAAAAAAAAqKrlbyTFGyMtRR8k8qSczMSwVy0hJzilN1lHxSy1JzlKwMgKzM3MwSp6LUxGwgt1YHosUIWUtJUSlCh6EBmh7T2lgAAAAA//8=");
@@ -213,6 +203,67 @@ namespace LostWordTracker.Test
             exportedData.Should().NotBeNull().And.BeEquivalentTo(dataString);
         }
 
+        [Test]
+        public async Task CharacterAddedToMasterList()
+        {
+            //var baseModel = new CharacterDefinitions()
+            //{
+            //    Characters = new System.Collections.Generic.Dictionary<int, CharacterDefinition> {
+            //        { 1, new CharacterDefinition()
+            //        {
+            //            Id = 1,
+            //            Name = "Reimu Hakurei",
+            //            Enabled = true,
+            //            CqTier = "S",
+            //            FarmTier = "S",
+            //            ObtainType = "Pray",
+            //            Portrait = "test.webp",
+            //            Tier = "S",
+            //            TierRank = 0,
+            //            Universe = "L1"
+            //        }
+            //        },
+            //        {2, new CharacterDefinition()
+            //        {
+            //            Id = 2,
+            //            Name = "Marisa Kirisame",
+            //            Enabled = true,
+            //            CqTier = "B",
+            //            FarmTier = "B",
+            //            ObtainType = "Pray",
+            //            Portrait = "test2.webp",
+            //            Tier = "B",
+            //            TierRank = 0,
+            //            Universe = "L1"
+            //        }
+            //        }
+            //    }
+
+            //};
+
+          
+            var dataService = _services.GetRequiredService<IDataService>();
+          
+            var characters = await dataService.GetCharactersData();
+            var lastObject = characters.CharacterStorage.Last();
+            characters.CharacterStorage.Remove(lastObject);
+
+            characters.CharacterStorage.Should().HaveCount(1);
+
+            await dataService.SaveData(characters);
+
+            //characters = await dataService.GetCharactersData();
+
+            //characters.Characters.Should().HaveCount(2);
+
+            //characters.CharacterStorage.Should().HaveCount(2);
+
+            characters = await dataService.LoadData();
+
+            characters.Characters.Should().HaveCount(2);
+
+            characters.CharacterStorage.Should().HaveCount(2);
+        }
 
     }
 }

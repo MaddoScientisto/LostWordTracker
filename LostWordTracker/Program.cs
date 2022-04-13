@@ -3,6 +3,7 @@ using Blazorise;
 using Blazorise.Bootstrap5;
 using Blazorise.Icons.FontAwesome;
 using LostWordTracker.Core.Services;
+using LostWordTracker.Core.Services.Impl;
 using LostWordTracker.Services;
 using LostWordTracker.Services.Impl;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -46,6 +47,10 @@ namespace LostWordTracker
 
             builder.Services.AddScoped<IDataService, DataService>();
             builder.Services.AddScoped<IGenericLocalStorageService, LocalStorageService>();
+
+            builder.Services.AddScoped<IDatabaseService, HttpDatabaseService>();
+
+            builder.Services.AddSingleton<IConfigurationService, ConfigurationService>();
 
             await builder.Build().RunAsync();
         }

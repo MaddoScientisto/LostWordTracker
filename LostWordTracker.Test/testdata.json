@@ -9,7 +9,8 @@
       "TierRank": 0,
       "FarmTier": "A",
       "CqTier": "S",
-      "ObtainType": "Prayer"
+      "ObtainType": "Prayer",
+      "Enabled": true
     },
     "2": {
       "Id": 2,
@@ -20,7 +21,8 @@
       "TierRank": 0,
       "FarmTier": "B",
       "CqTier": "C",
-      "ObtainType": "Prayer"
+      "ObtainType": "Prayer",
+      "Enabled": true
     }
   }
 }

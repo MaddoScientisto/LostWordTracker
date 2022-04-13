@@ -9,9 +9,11 @@
         public string Tier { get; set; }
         public int TierRank { get; set; }
         public string FarmTier { get; set; }
-        public string CqTier { get; set; } 
+        public string CqTier { get; set; }
 
         public string ObtainType { get; set; }
-        
+
+        public bool Enabled { get; set; }
+
     }
 }
