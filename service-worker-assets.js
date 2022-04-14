@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-M7gmz0ZuKUPKWdvwrA6cn6fhy5Pr2QaAViJtyljFMns=",
+      "hash": "sha256-LMDDsc5Hi4RMASD8lhOJlJx8yG2k7WgXWUZmKnU0SSY=",
       "url": "Characters.json"
     },
     {
@@ -187,6 +187,10 @@
     {
       "hash": "sha256-pc8b4Esdu6G9JNrAnlomRTao8QnvIaNdeCtMdU35S6k=",
       "url": "images\/portraits\/203001_thumbnail.webp"
+    },
+    {
+      "hash": "sha256-zLRZsgRYwMiwLaw2OvbIPTdn5JurbrFTWlhrNnVpFcc=",
+      "url": "images\/portraits\/208101_thumbnail.webp"
     },
     {
       "hash": "sha256-cg+zhB+sV+GYNyYeo2StikIGPyNwYukbOdUPE30xAK0=",
@@ -513,7 +517,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-s9LgvWyB\/PTfUUT1VdZBS+qIWh8neeOoJ6WVBokEdgQ=",
+      "hash": "sha256-UmRCnN1thQoSiBcyRsW2WqPd4z1uKbXMgT6P6Bep9us=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -553,11 +557,11 @@
       "url": "_framework\/Blazorise.Snackbar.dll"
     },
     {
-      "hash": "sha256-SMkd2IAw3EMudbx5yA\/cMfghFljUvZVCaKvYBkNJU1I=",
+      "hash": "sha256-QJ0G7l0NZ\/AnvQ1hQPI55JoJsFLwg8dfa7Ke5sayM40=",
       "url": "_framework\/LostWordTracker.Core.dll"
     },
     {
-      "hash": "sha256-RIHypVXpbkOEhFloPCeP6JiYKPkTPhT3qwWSWwE7DYA=",
+      "hash": "sha256-nPsEKg0w60LkHwgs7k0xZskaGEjre3C20N+8wpon1w8=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -709,7 +713,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-nxbMaRVW4eOAc7uFoOPzxyLtoGoLA5UIAASI8iXelU8=",
+      "hash": "sha256-j+4duS9fj2NcUa9ndW2f\/sE\/c+Clua51o5QTq8RXyCI=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -725,7 +729,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-yNfzd0nAZrGKMj35paeYrhCez28x17QkQ01mrWCxXp4=",
+      "hash": "sha256-4ROUhU5ZHv4wwV3FGuwFpRtP0+fnCYMVrMLjnvXZ4cg=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -897,5 +901,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "CiWDUOjI"
+  "version": "CLz3zife"
 };
