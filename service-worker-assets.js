@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-LMDDsc5Hi4RMASD8lhOJlJx8yG2k7WgXWUZmKnU0SSY=",
+      "hash": "sha256-ia5aw39HabBeFRGkGUq+YnK0pTgjoquqWnyP0lS5Eps=",
       "url": "Characters.json"
     },
     {
@@ -517,7 +517,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-UmRCnN1thQoSiBcyRsW2WqPd4z1uKbXMgT6P6Bep9us=",
+      "hash": "sha256-w2BVTX4wZc9mUNJMdGC1j4bPHMZ9DKgaJmLaLi4RuqA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -557,11 +557,11 @@
       "url": "_framework\/Blazorise.Snackbar.dll"
     },
     {
-      "hash": "sha256-QJ0G7l0NZ\/AnvQ1hQPI55JoJsFLwg8dfa7Ke5sayM40=",
+      "hash": "sha256-E1FZIeBX6KYQGUseyDTyvd4WUMHAviWFgP2XK1A30LQ=",
       "url": "_framework\/LostWordTracker.Core.dll"
     },
     {
-      "hash": "sha256-nPsEKg0w60LkHwgs7k0xZskaGEjre3C20N+8wpon1w8=",
+      "hash": "sha256-SB5EFsOSKzFUGhOzcFi0BZHuyXtwiKd4GKta6M0uBRs=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -901,5 +901,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "CLz3zife"
+  "version": "WlFgEnSP"
 };

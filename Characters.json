@@ -1214,7 +1214,7 @@
     },
     "102": {
       "Id": 102,
-      "Name": "Sagume Kishin (space whatever)",
+      "Name": "Sagume Kishin (Codename: Azusa)",
       "Universe": "B3",
       "Portrait": "208101_thumbnail.webp",
       "Tier": "EX",
@@ -1222,7 +1222,7 @@
       "FarmTier": "EX",
       "CqTier": "EX",
       "ObtainType": "Sfes",
-      "Enabled": false
+      "Enabled": true
     }
   }
 }
