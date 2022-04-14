@@ -13,7 +13,10 @@ namespace LostWordTracker.Core.Services.Impl
 
         public ValueTask<T> GetItemAsync<T>(string key, CancellationToken? cancellationToken = null)
         {
-            return  new ValueTask<T>((T)_storage[key]);
+            if (_storage.ContainsKey(key))
+                return new ValueTask<T>((T)_storage[key]);
+            else
+                return new ValueTask<T>();
         }
 
         public ValueTask SetItemAsync<T>(string key, T data, CancellationToken? cancellationToken = null)

@@ -46,13 +46,7 @@ namespace LostWordTracker.Services.Impl
             loadedCharacters.CharacterStorage = new List<CharacterStorage>();
             foreach (var character in loadedCharacters.Characters)
             {
-                loadedCharacters.CharacterStorage.Add(new CharacterStorage()
-                {
-                    Id = character.Key,
-                    Level = 0,
-                    Obtained = false,
-                    LimitBreak = 0
-                });
+                loadedCharacters.CharacterStorage.Add(new CharacterStorage(character.Key));
             }
 
             return loadedCharacters;
@@ -66,6 +60,7 @@ namespace LostWordTracker.Services.Impl
         public async Task<CharacterDefinitions> LoadData()
         {
             var loadedData = await _localStorage.GetItemAsync<CharacterStorageContainer>("CharacterData");
+            if (loadedData == null)  return await GetCharactersData();
 
             var charactersData = await LoadCharacterDefinitions();
             charactersData.CharacterStorage = new List<CharacterStorage>();
@@ -78,8 +73,9 @@ namespace LostWordTracker.Services.Impl
                 {
                     Id = character.Key,
                     Level = loadedChar.Level,
-                    Obtained = loadedChar.Obtained,
-                    LimitBreak = loadedChar.LimitBreak
+                    Obtained = loadedChar.Obtained, // unused flag
+                    LimitBreak = loadedChar.LimitBreak ,
+                    Awakening = loadedChar.Awakening,
                 });
             }
 
@@ -88,13 +84,7 @@ namespace LostWordTracker.Services.Impl
 
             foreach (var charId in missingCharacters)
             {
-                charactersData.CharacterStorage.Add(new CharacterStorage()
-                {
-                    Id = charId,
-                    Level = 0,
-                    Obtained = false,
-                    LimitBreak = 0
-                });
+                charactersData.CharacterStorage.Add(new CharacterStorage(charId));
             }
 
             return charactersData;
@@ -123,7 +113,8 @@ namespace LostWordTracker.Services.Impl
                     Id = character.Key,
                     Level = loadedChar.Level,
                     Obtained = loadedChar.Obtained,
-                    LimitBreak = loadedChar.LimitBreak
+                    LimitBreak = loadedChar.LimitBreak,
+                    Awakening = loadedChar.Awakening
                 });
             }
 

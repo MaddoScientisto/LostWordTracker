@@ -68,9 +68,13 @@
                         <Badge Color="Color.Danger">D</Badge>
                         break;
                 }
-                <Check @bind-Checked="@context.Obtained">Obtained</Check>
-                <div class="characterData1">
+                @*<Check @bind-Checked="@context.Obtained">Obtained</Check>*@
+                
+                <div class="characterData1">LB
                     <Rating Color="Color.Primary" @bind-SelectedValue="@context.LimitBreak" MaxValue="5"></Rating>
+                </div>
+                <div class="characterData1">AW
+                    <Rating Color="Color.Secondary" @bind-SelectedValue="@context.Awakening" MaxValue="5"></Rating>
                 </div>
             </div>
 
@@ -83,11 +87,11 @@
 
 
 @code {
-
+    [Inject] INotificationService NotificationService { get; set; }
     private bool ShouldShow(CharacterStorage context, CharacterDefinition currentCharData)
     {
         if (!currentCharData.Enabled) return false;
-        if (_showOnlyObtained && !context.Obtained) return false;
+        if (_showOnlyObtained && context.LimitBreak == 0) return false;
 
         return true;
     }
@@ -106,38 +110,43 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _characterDefinitions = await _dataService.GetCharactersData();
+        //_characterDefinitions = await _dataService.GetCharactersData();
+        await Load();
     }
 
 
-    public void Mark(CharacterStorage character)
+    private void Mark(CharacterStorage character)
     {
         character.Obtained = true;
     }
 
-    public async Task Save()
+    private async Task Save()
     {
         await _dataService.SaveData(_characterDefinitions);
+        await NotificationService.Success("Data saved");
         //await _localStorage.SetItemAsync<CharacterData>("CharacterData", characters);
     }
 
-    public async Task Load()
+    private async Task Load()
     {
         _characterDefinitions = await _dataService.LoadData();
+        await NotificationService.Success("Data loaded");
         //var data = await _localStorage.GetItemAsync<CharacterData>("CharacterData");
     }
 
-    public async Task Import()
+    private async Task Import()
     {
         _characterDefinitions = await _dataService.ImportCompressed(_importData);
+        await NotificationService.Success("Data imported");
     }
 
-    public async Task Export()
+    private async Task Export()
     {
         _importData = _dataService.ExportCompressed(_characterDefinitions);
+        await NotificationService.Success("Data exported");
     }
 
-    public async Task ToggleView()
+    private async Task ToggleView()
     {
         _showOnlyObtained = !_showOnlyObtained;
     }

@@ -18,6 +18,7 @@ using System.IO;
 using FluentAssertions;
 using System.Linq;
 using LostWordTracker.Test.Services;
+using System.Text.Json.Serialization;
 
 namespace LostWordTracker.Test
 {
@@ -25,7 +26,55 @@ namespace LostWordTracker.Test
     {
         private IServiceProvider _services;
 
+        //    private System.Collections.Generic.List<CharacterDefinition> _testCharacters = new System.Collections.Generic.List<CharacterDefinition>
+        //    {
+        //        new CharacterDefinition()
+        //        {
+        //            Id = 1,
+        //            Name = "Reimu Hakurei",
+        //            Universe = "L1",
+        //            Portrait = "100101_Reimu_Hakurei_SQ.webp",
+        //            Tier = "S",
+        //            TierRank = 0,
+        //            FarmTier = "A",
+        //            CqTier = "S",
+        //            ObtainType = "Prayer",
+        //            Enabled = true,
+        //        },
+        //        new CharacterDefinition()
+        //        {
+        //            Id = 2,
+        //            Name = "Marisa Kirisame",
+        //            Universe = "L1",
+        //            Portrait = "100201_Marisa_Kirisame_SQ.webp",
+        //            Tier = "C",
+        //            TierRank = 0,
+        //            FarmTier = "B",
+        //            CqTier = "C",
+        //            ObtainType = "Prayer",
+        //            Enabled = true,
+        //        }
+        //};
 
+        private System.Collections.Generic.List<CharacterStorage> _testSaveData = new System.Collections.Generic.List<CharacterStorage>()
+        {
+            new CharacterStorage()
+            {
+                Id = 1,
+                Awakening = 5,
+                Level = 100,
+                LimitBreak = 5,
+                Obtained = true
+            },
+            new CharacterStorage()
+            {
+                Id = 2,
+                Awakening = 0,
+                Level = 1,
+                LimitBreak = 0,
+                Obtained = false
+            }
+        };
 
         [SetUp]
         public void Setup()
@@ -40,12 +89,20 @@ namespace LostWordTracker.Test
             services.AddScoped<IDataService, DataService>();
             services.AddSingleton<IGenericLocalStorageService, MemoryStorageService>();
 
-            services.AddScoped<IDatabaseService, FileSystemDatabaseService>();                       
+            services.AddScoped<IDatabaseService, FileSystemDatabaseService>();
             services.AddAutoMapper(typeof(AutomapperProfile));
 
             services.AddSingleton<IConfigurationService, TestConfigurationService>();
 
             return services.BuildServiceProvider();
+        }
+
+        private async Task<CharacterDefinitions> GetTestCharacters(string path)
+        {
+            var fileText = await File.ReadAllTextAsync(path);
+            var deserializedObject = JsonSerializer.Deserialize<CharacterDefinitions>(fileText);
+
+            return deserializedObject;
         }
 
         [Test]
@@ -60,21 +117,9 @@ namespace LostWordTracker.Test
 
             characters.Characters.Should().NotBeNullOrEmpty().And.ContainKeys(new int[] { 1, 2 });
 
-            var exampleCharacter = new CharacterDefinition()
-            {
-                Id = 1,
-                Name = "Reimu Hakurei",
-                Universe = "L1",
-                Portrait = "100101_Reimu_Hakurei_SQ.webp",
-                Tier = "S",
-                TierRank = 0,
-                FarmTier = "A",
-                CqTier = "S",
-                ObtainType = "Prayer",
-                Enabled = true,
-            };
-
-            characters.Characters[1].Should().BeEquivalentTo(exampleCharacter);
+            var exampleCharacters = await this.GetTestCharacters("testdata.json");
+        
+            characters.Characters[1].Should().BeEquivalentTo(exampleCharacters.Characters[1]);
 
             characters.CharacterStorage.Should().BeNull();
 
@@ -92,6 +137,9 @@ namespace LostWordTracker.Test
 
             characters.Characters.Should().NotBeNullOrEmpty().And.ContainKeys(new int[] { 1, 2 });
 
+            var testCharacters = await GetTestCharacters("testdata.json");
+
+            // Check if it contains uninitialized save data
             characters.CharacterStorage.Should().NotBeNullOrEmpty().And.ContainEquivalentOf(new CharacterStorage()
             {
                 Id = 1,
@@ -108,27 +156,13 @@ namespace LostWordTracker.Test
         {
             var dataService = _services.GetRequiredService<IDataService>();
 
-            var dataToSave = new System.Collections.Generic.List<CharacterStorage>()
-                {
-                     new CharacterStorage()
-            {
-                Id = 1,
-                Level = 100,
-                LimitBreak = 5,
-                Obtained = true
-            }
-        };
-
-
-
-
             var testChars = new CharacterDefinitions()
             {
                 //Characters = new System.Collections.Generic.Dictionary<int, CharacterDefinition>
                 //{
                 //    {1, new CharacterDefinition() }
                 //},
-                CharacterStorage = dataToSave
+                CharacterStorage = _testSaveData
             };
 
             await dataService.SaveData(testChars);
@@ -136,7 +170,7 @@ namespace LostWordTracker.Test
             var data = await dataService.LoadData();
 
             data.Characters.Should().NotBeNullOrEmpty().And.ContainKeys(new int[] { 1, 2 });
-            data.CharacterStorage.Should().NotBeNullOrEmpty().And.ContainEquivalentOf(dataToSave.First());
+            data.CharacterStorage.Should().NotBeNullOrEmpty().And.ContainEquivalentOf(_testSaveData[0]);
         }
 
         [Test]
@@ -144,30 +178,21 @@ namespace LostWordTracker.Test
         {
             var dataService = _services.GetRequiredService<IDataService>();
 
-            string dataString = "[{\"Id\":1,\"Obtained\":true,\"Level\":100,\"LimitBreak\":5},{\"Id\":2,\"Obtained\":false,\"Level\":0,\"LimitBreak\":0}]";
+            //string dataString = "[{\"Id\":1,\"Obtained\":true,\"Level\":100,\"LimitBreak\":5},{\"Id\":2,\"Obtained\":false,\"Level\":0,\"LimitBreak\":0}]";
+
+            string dataString = JsonSerializer.Serialize(_testSaveData);
+
             var data = await dataService.ImportRaw(dataString);
 
             data.Should().NotBeNull();
 
-            data.CharacterStorage.Should().NotBeNullOrEmpty().And.ContainEquivalentOf(new CharacterStorage()
-            {
-                Id = 1,
-                Level = 100,
-                LimitBreak = 5,
-                Obtained = true
-            }).And.ContainEquivalentOf(new CharacterStorage()
-            {
-                Id = 2,
-                Obtained = false,
-                Level = 0,
-                LimitBreak = 0
-            });
+            data.CharacterStorage.Should().NotBeNullOrEmpty().And.ContainEquivalentOf(_testSaveData[0]).And.ContainEquivalentOf(_testSaveData[1]);
 
             var exportedData = dataService.ExportRaw(data);
             exportedData.Should().NotBeNull().And.BeEquivalentTo(dataString);
         }
 
-        [Test]
+        //[Test]
         public async Task ExportDataCompressed()
         {
             var dataService = _services.GetRequiredService<IDataService>();
@@ -175,13 +200,14 @@ namespace LostWordTracker.Test
             data.CharacterStorage[1].Obtained = true;
             data.CharacterStorage[1].Level = 100;
             data.CharacterStorage[1].LimitBreak = 5;
+            data.CharacterStorage[1].Awakening = 5;
 
             var exportedData = dataService.ExportCompressed(data);
 
             exportedData.Should().NotBeNullOrWhiteSpace().And.BeEquivalentTo("aAAAAB+LCAAAAAAAAAqKrlbyTFGyMtRR8k8qSczMSwVy0hJzilN1lHxSy1JzlKwMgKzM3MwSp6LUxGwgt1YHosUIWUtJUSlCh6EBmh7T2lgAAAAA//8=");
         }
 
-        [Test]
+        //[Test]
         public async Task ImportExportDataCompressed()
         {
             var dataService = _services.GetRequiredService<IDataService>();
@@ -196,7 +222,8 @@ namespace LostWordTracker.Test
                 Id = 2,
                 Level = 100,
                 LimitBreak = 5,
-                Obtained = true
+                Obtained = true,
+                Awakening = 5
             });
 
             var exportedData = dataService.ExportCompressed(data);
@@ -241,9 +268,9 @@ namespace LostWordTracker.Test
 
             //};
 
-          
+
             var dataService = _services.GetRequiredService<IDataService>();
-          
+
             var characters = await dataService.GetCharactersData();
             var lastObject = characters.CharacterStorage.Last();
             characters.CharacterStorage.Remove(lastObject);
@@ -263,6 +290,35 @@ namespace LostWordTracker.Test
             characters.Characters.Should().HaveCount(2);
 
             characters.CharacterStorage.Should().HaveCount(2);
+        }
+
+        [Test]
+        public async Task LoadDataWhenNothingIsSaved()
+        {
+            var dataService = _services.GetRequiredService<IDataService>();
+
+            var testChars = new CharacterDefinitions()
+            {
+                //Characters = new System.Collections.Generic.Dictionary<int, CharacterDefinition>
+                //{
+                //    {1, new CharacterDefinition() }
+                //},
+                CharacterStorage = _testSaveData
+            };
+
+            //await dataService.SaveData(testChars);
+
+            var data = await dataService.LoadData();
+
+            data.Characters.Should().NotBeNullOrEmpty().And.ContainKeys(new int[] { 1, 2 });
+            data.CharacterStorage.Should().NotBeNullOrEmpty().And.NotContainEquivalentOf(_testSaveData[0]).And.ContainEquivalentOf(new CharacterStorage()
+            {
+                Id = 1,
+                Awakening = 0,
+                Level = 0,
+                LimitBreak =0,
+                Obtained = false
+            });
         }
 
     }
