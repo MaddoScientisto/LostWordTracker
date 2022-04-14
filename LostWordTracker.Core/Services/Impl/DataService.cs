@@ -84,8 +84,18 @@ namespace LostWordTracker.Services.Impl
             }
 
             // Find all the ids that weren't loaded and generate new data for them
+            var missingCharacters = charactersData.Characters.Where(x => !charactersData.CharacterStorage.Any(y => y.Id == x.Key)).Select(z => z.Key).ToArray();
 
-
+            foreach (var charId in missingCharacters)
+            {
+                charactersData.CharacterStorage.Add(new CharacterStorage()
+                {
+                    Id = charId,
+                    Level = 0,
+                    Obtained = false,
+                    LimitBreak = 0
+                });
+            }
 
             return charactersData;
         }
