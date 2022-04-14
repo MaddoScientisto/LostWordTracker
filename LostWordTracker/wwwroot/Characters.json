@@ -1216,11 +1216,11 @@
       "Id": 102,
       "Name": "Sagume Kishin (space whatever)",
       "Universe": "B3",
-      "Portrait": null,
-      "Tier": null,
-      "TierRank": 1,
-      "FarmTier": null,
-      "CqTier": null,
+      "Portrait": "208101_thumbnail.webp",
+      "Tier": "EX",
+      "TierRank": 4,
+      "FarmTier": "EX",
+      "CqTier": "EX",
       "ObtainType": "Sfes",
       "Enabled": false
     }

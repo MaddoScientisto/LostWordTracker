@@ -83,6 +83,8 @@ namespace LostWordTracker.Services.Impl
                 });
             }
 
+            // Find all the ids that weren't loaded and generate new data for them
+
 
 
             return charactersData;
