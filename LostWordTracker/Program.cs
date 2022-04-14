@@ -52,6 +52,8 @@ namespace LostWordTracker
 
             builder.Services.AddSingleton<IConfigurationService, ConfigurationService>();
 
+            builder.Services.AddScoped<IDrawingService, DrawingService>();
+
             await builder.Build().RunAsync();
         }
     }

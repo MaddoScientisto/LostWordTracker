@@ -10,5 +10,6 @@ namespace LostWordTracker.Core.Services
     public interface IDatabaseService
     {
         Task<CharacterDefinitions> LoadCharacterDefinitions();
+        Task<Byte[]> GetFont(string path);
     }
 }

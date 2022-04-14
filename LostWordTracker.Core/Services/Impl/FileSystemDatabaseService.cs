@@ -16,6 +16,11 @@ namespace LostWordTracker.Core.Services.Impl
             _config = configurationService;
         }
 
+        public Task<byte[]> GetFont(string path)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<CharacterDefinitions> LoadCharacterDefinitions()
         {
             var fileText = await File.ReadAllTextAsync(_config.DataPath);

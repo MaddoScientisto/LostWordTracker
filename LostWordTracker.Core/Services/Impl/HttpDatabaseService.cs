@@ -26,5 +26,11 @@ namespace LostWordTracker.Core.Services.Impl
         {
             return await _httpClient.GetFromJsonAsync<CharacterDefinitions>(_configurationService.DataPath);
         }
+
+        public async Task<Byte[]> GetFont(string path)
+        {
+            return await _httpClient.GetByteArrayAsync(path);
+
+        }
     }
 }
