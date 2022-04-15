@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-6jW64UmnpUzKYlwbhOpZIPWdrB\/nkafNaWTYSzEtuz0=",
+      "hash": "sha256-of2sOv2MLptrNynPGLluSGxmf1GpdYltYaMq9e9y5WQ=",
       "url": "404.html"
     },
     {
@@ -485,7 +485,7 @@
       "url": "images\/portraits\/Square_Thumbnail_109001.webp"
     },
     {
-      "hash": "sha256-bGRlGcjU6wifwLdtIL+BhfD\/tE6OE3DNPVV0Z1Wcdk0=",
+      "hash": "sha256-O1NRlvVTPYUyWAtwwXCYPmCTtcu+WJlROCC+Vykz9x4=",
       "url": "index.html"
     },
     {
@@ -1013,5 +1013,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "D7mE58vV"
+  "version": "PNlh5y9O"
 };
