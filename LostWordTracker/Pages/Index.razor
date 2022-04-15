@@ -93,6 +93,7 @@
         <ModalContent Centered>
             <ModalHeader><ModalTitle>@modalCharacterDefinition.Name</ModalTitle>  <CloseButton></CloseButton></ModalHeader>
             <ModalBody>
+                <Button Color="Color.Primary" Clicked="(e => MaxCharacter(modalCharacterStorage))">Max All</Button>
                 <Field>
                     <FieldLabel>Rebirth</FieldLabel>
                     <Switch @bind-Checked="@modalCharacterStorage.Rebirth"></Switch>
@@ -201,5 +202,15 @@
         modalCharacterDefinition = characterDefinition;
         modalCharacterStorage = characterStorage;
         await _characterModalRef.Show();
+    }
+
+    private async Task MaxCharacter(CharacterStorage character)
+    {
+        character.Level = 100;
+        character.Rank = 5;
+        character.Skill1 = 10;
+        character.Skill2 = 10;
+        character.Skill3 = 10;
+        
     }
 }

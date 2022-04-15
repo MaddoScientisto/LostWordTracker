@@ -11,7 +11,7 @@
     <NumericEdit @bind-Value="@columns" />
 </Field>
 <p>It's going to take a while because webASM is kind of slow so relax for a bit while the image is generating</p>
-<button class="btn btn-primary" @onclick="IncrementCount" Loading="@isLoading" >Click me</button>
+<button class="btn btn-primary" @onclick="IncrementCount" Loading="@isLoading">Click me</button>
 <img src="@imageSource" style="max-width: 100%; max-height: 90vh; display: block; object-fit: scale-down;" />
 
 @code {
@@ -22,9 +22,49 @@
     bool drawLevels = false;
     bool drawSkills = false;
     int columns = 20;
+
+    protected class ExportSettings
+    {
+        public bool DrawLevels { get; set; }
+        public bool DrawSkills { get; set; }
+        public int Columns { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadSettings();
+    }
+
+    protected async Task LoadSettings()
+    {
+        var settings = await _localStorage.GetItemAsync<ExportSettings>("ExportSettings");
+
+        if (settings != null)
+        {
+            drawLevels = settings.DrawLevels;
+            drawSkills = settings.DrawSkills;
+            columns = settings.Columns;
+        }
+    }
+
+    protected async Task SaveSettings()
+    {
+        var settings = new ExportSettings()
+            {
+                DrawLevels = drawLevels,
+                DrawSkills = drawSkills,
+                Columns = columns
+            };
+
+        await _localStorage.SetItemAsync("ExportSettings", settings);
+    }
+
     private async Task IncrementCount()
     {
         isLoading = true;
+        await InvokeAsync(StateHasChanged);
+        await SaveSettings();
+
         var bytes = await DrawingService.MakeImage(drawLevels, drawSkills, columns);
         string base64String = Convert.ToBase64String(bytes);
         imageSource = $"data:image/png;base64,{base64String}";
