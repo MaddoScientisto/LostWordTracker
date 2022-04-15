@@ -1,19 +1,28 @@
 ﻿@using LostWordTracker.Core.Services
 @page "/export"
 
-<h1>Test</h1>
+<h1>Image export</h1>
 
+<Switch TValue="bool" @bind-Checked="@drawLevels">Draw Levels</Switch>
+<Switch TValue="bool" @bind-Checked="@drawSkills">Draw Skills</Switch>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<p>It's going to take a while because webASM is kind of slow so relax for a bit while the image is generating</p>
+<button class="btn btn-primary" @onclick="IncrementCount" Loading="@isLoading" >Click me</button>
 <img src="@imageSource" style="max-width: 100%; max-height: 90vh; display: block; object-fit: scale-down;" />
+
 @code {
     [Inject] IDrawingService DrawingService { get; set; }
     string imageSource;
 
+    bool isLoading = false;
+    bool drawLevels = false;
+    bool drawSkills = false;
     private async Task IncrementCount()
     {
-        var bytes = await DrawingService.MakeImage();
+        isLoading = true;
+        var bytes = await DrawingService.MakeImage(drawLevels, drawSkills);
         string base64String = Convert.ToBase64String(bytes);
         imageSource = $"data:image/png;base64,{base64String}";
+        isLoading = false;
     }
 }

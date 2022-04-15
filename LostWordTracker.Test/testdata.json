@@ -3,6 +3,7 @@
     "1": {
       "Id": 1,
       "Name": "Reimu Hakurei",
+      "ShortName": "Reimu",
       "Universe": "L1",
       "Portrait": "100101_Reimu_Hakurei_SQ.webp",
       "Tier": "S",
@@ -15,6 +16,7 @@
     "2": {
       "Id": 2,
       "Name": "Marisa Kirisame",
+      "ShortName": "Marisa",
       "Universe": "L1",
       "Portrait": "100201_Marisa_Kirisame_SQ.webp",
       "Tier": "C",
