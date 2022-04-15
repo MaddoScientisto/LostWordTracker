@@ -57,6 +57,10 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
+      "hash": "sha256-10aXol7Onqv85rtqJQkZlzfW6xUpX0kH79yOSrF0JS8=",
+      "url": "decode.min.js"
+    },
+    {
       "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
       "url": "favicon.ico"
     },
@@ -485,7 +489,7 @@
       "url": "images\/portraits\/Square_Thumbnail_109001.webp"
     },
     {
-      "hash": "sha256-WdDr+8d3MkeUTVDKUtJp0qgR+ACcT0xrGhpA7MFUOzc=",
+      "hash": "sha256-\/c1XOzljejkN4NMfGjGQvLq4XKqGYJr3bYUCKYwWaI8=",
       "url": "index.html"
     },
     {
@@ -1013,5 +1017,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "WHpnEb9B"
+  "version": "tUpXpBkn"
 };
