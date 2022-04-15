@@ -17,9 +17,9 @@ jobs:
       with:
         dotnet-version: 6.0.4
      # Install wasm workload
-    - name: install wasm workload
+    #- name: install wasm workload
       #shell: pwsh
-      run: dotnet workload install wasm-tools --ignore-failed-sources
+    #  run: dotnet workload install wasm-tools --ignore-failed-sources
      # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish LostWordTracker/LostWordTracker.csproj -c Release -o release --nologo
