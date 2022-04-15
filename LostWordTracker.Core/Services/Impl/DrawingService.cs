@@ -23,7 +23,7 @@ namespace LostWordTracker.Core.Services.Impl
             _databaseService = databaseService;
         }
 
-        public async Task<byte[]> MakeImage(bool drawLevel, bool drawSkills)
+        public async Task<byte[]> MakeImage(bool drawLevel, bool drawSkills, int columns)
         {
             // Setup font
             var fontBytes = await _databaseService.GetFont("fonts/OpenSans-Regular.ttf");
@@ -41,16 +41,28 @@ namespace LostWordTracker.Core.Services.Impl
 
             var data = await _dataService.LoadData();
 
-            int width = 120;
-            int height = 220;
-            int maxColumns = 20;
+            const int width = 120;
+            const int height = 220;
+
+            int maxColumns = columns;
 
             var usableChars = data.CharacterStorage.Where(x => x.LimitBreak > 0).ToList();
 
             int rows = (int)Math.Ceiling((float)usableChars.Count / (float)maxColumns);
 
-            using Image image = new Image<Rgba32>(maxColumns * width, rows * height);
+            int imageWidth = (maxColumns * width) + 20;
+            int imageHeight = (rows * height) + 30; // Adding the signature space
+
+            using Image image = new Image<Rgba32>(imageWidth, imageHeight);
             image.Mutate(x => x.Fill(Color.White));
+
+            image.Mutate(x => x.DrawText(new TextOptions(font)
+            {
+                Origin = new PointF(10, imageHeight - 30),
+                WrappingLength = imageWidth - 10,
+                HorizontalAlignment = HorizontalAlignment.Left
+
+            }, @"Made with: maddoscientisto.github.io/LostWordTracker", Color.Blue));
 
             int row = 0;
             int col = 0;
@@ -65,8 +77,8 @@ namespace LostWordTracker.Core.Services.Impl
 
                 int currentRow = (int)Math.Ceiling((float)i / (float)maxColumns);
 
-                int cursorX = col * width;
-                int cursorY = row * height;
+                int cursorX = (col * width) + 10;
+                int cursorY = (row * height)+10;
 
                 TextOptions options = new(font)
                 {
@@ -107,8 +119,11 @@ namespace LostWordTracker.Core.Services.Impl
                     col = 0;
                     row++;
                 }
+
+              
             }
 
+            
 
             using var stream = new MemoryStream();
 
@@ -120,7 +135,7 @@ namespace LostWordTracker.Core.Services.Impl
         {
             for (int index = 0; index < count; index++)
             {
-                IPath starPolygon = new Star(x: x + 20f * index, y: y, prongs: 5, innerRadii: 5.0f, outerRadii: 10.0f);
+                IPath starPolygon = new Star(x: x + 20f * index, y: y, prongs: 5, innerRadii: 5.0f, outerRadii: 10.0f, 180);
 
                 baseImage.Mutate(x => x.Fill(color, starPolygon));
             }

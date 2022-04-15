@@ -8,6 +8,6 @@ namespace LostWordTracker.Core.Services
 {
     public interface IDrawingService
     {
-        Task<byte[]> MakeImage(bool drawLevel, bool drawSkills);
+        Task<byte[]> MakeImage(bool drawLevel, bool drawSkills, int columns);
     }
 }
