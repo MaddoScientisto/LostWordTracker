@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostWordTracker", "LostWord
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostWordTracker.Core", "LostWordTracker.Core\LostWordTracker.Core.csproj", "{CFF5AAB1-378F-4B41-BAE7-E100257DB78B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostWordTracker.Test", "LostWordTracker.Test\LostWordTracker.Test.csproj", "{AF715056-EDCE-4B36-972B-1FA574CFA23D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostWordTracker.Test", "LostWordTracker.Test\LostWordTracker.Test.csproj", "{AF715056-EDCE-4B36-972B-1FA574CFA23D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
