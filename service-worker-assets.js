@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-of2sOv2MLptrNynPGLluSGxmf1GpdYltYaMq9e9y5WQ=",
+      "hash": "sha256-M3Aniy\/KBdIAATpDlsuRW5vF1SyAUWWvT1E+pPTZv84=",
       "url": "404.html"
     },
     {
@@ -485,7 +485,7 @@
       "url": "images\/portraits\/Square_Thumbnail_109001.webp"
     },
     {
-      "hash": "sha256-O1NRlvVTPYUyWAtwwXCYPmCTtcu+WJlROCC+Vykz9x4=",
+      "hash": "sha256-gGiZ9tR8Djn8Wc6ugM8lKdNTCKFVEAiwR7OpUiSE5Jo=",
       "url": "index.html"
     },
     {
@@ -529,7 +529,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-3G65+E+kKA\/Anx0ZB7hZ3Pv681nTmb+NolkTJyEJk64=",
+      "hash": "sha256-mrG6SMof\/EST3GuqKsEbUZ+Ex4EEaikiDkamlprmD9U=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -573,7 +573,7 @@
       "url": "_framework\/LostWordTracker.Core.dll"
     },
     {
-      "hash": "sha256-BDdj7MMyjeVfNxAiVFAqwlWI0A59J9R4NoSh2qZILU4=",
+      "hash": "sha256-1y8qtPBZ7P1Vl59vd5gMQBub\/lr\/BzDCm27wqqkic80=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -585,7 +585,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
-      "hash": "sha256-iZmtitZAOoGa0H\/MrjodoFpS7RSqgj2A4P85QscwI4c=",
+      "hash": "sha256-RzG14vnfPy271SUFRkhdaFMJaVtGoKPEfppnzsewH4I=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -1013,5 +1013,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "PNlh5y9O"
+  "version": "r5KfSj4M"
 };
