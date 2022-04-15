@@ -529,7 +529,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-x\/Vrgx8ChHiMQBYadDGu8uzIaQfoKf3BlaKCPvKR27I=",
+      "hash": "sha256-4I8qKyLt6xYZIuz8KsMVh8eNWr2yv3tR+C\/Y5I\/5J1U=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -569,11 +569,11 @@
       "url": "_framework\/Blazorise.Snackbar.dll"
     },
     {
-      "hash": "sha256-CtqbaSSZe2X6rJHeO7\/8W8ckDghWRVwUVvOs882wPII=",
+      "hash": "sha256-yBGge7xy0mSqLL\/RBHfErA6D\/SeF6OohWCjfDA\/kvGc=",
       "url": "_framework\/LostWordTracker.Core.dll"
     },
     {
-      "hash": "sha256-aI3busvXcTJ4Rm1HiQzPP7LandKtoUJ6lZ+C4S8qcRs=",
+      "hash": "sha256-DFDKApBBGqNIfh8z4cQ\/CKBD5ATpkAsfSUluD9VjEQM=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -1013,5 +1013,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "MdskzS0w"
+  "version": "\/n93MIz8"
 };
