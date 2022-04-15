@@ -533,7 +533,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-PdjmjGrGV4Rjd6g9DXxnu5fk1M8d4zmWqQ5wVzco4ro=",
+      "hash": "sha256-pYiwwjMPvdNztpez9gTRRb93jL7c8YpahnrjF2Ku2dg=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -577,7 +577,7 @@
       "url": "_framework\/LostWordTracker.Core.dll"
     },
     {
-      "hash": "sha256-Wkk7C522LD\/ASC1GeNJVvwvODjx+v8hKcfBRPVfc2Hg=",
+      "hash": "sha256-5Ksd+oa\/hnYDOjrz2e+smwog9NIhsJf220ut9C4NwH4=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -1017,5 +1017,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "tUpXpBkn"
+  "version": "msSJlZWt"
 };
