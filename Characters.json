@@ -3,6 +3,7 @@
     "1": {
       "Id": 1,
       "Name": "Reimu Hakurei",
+      "ShortName": "Reimu",
       "Universe": "L1",
       "Portrait": "100101_Reimu_Hakurei_SQ.webp",
       "Tier": "S",
@@ -15,6 +16,7 @@
     "2": {
       "Id": 2,
       "Name": "Marisa Kirisame",
+      "ShortName": "Marisa",
       "Universe": "L1",
       "Portrait": "100201_Marisa_Kirisame_SQ.webp",
       "Tier": "C",
@@ -27,6 +29,7 @@
     "3": {
       "Id": 3,
       "Name": "Reimu Hakurei (Scarlet)",
+      "ShortName": "Reimu (Scarlet)",
       "Universe": "A6",
       "Portrait": "Chara_Square_400101.webp",
       "Tier": "EX",
@@ -39,6 +42,7 @@
     "4": {
       "Id": 4,
       "Name": "Youmu Konpaku (Lunar War Gardener)",
+      "ShortName": "Youmu (Gardener)",
       "Universe": "B3",
       "Portrait": "3011youmu_0.webp",
       "Tier": "EX",
@@ -51,6 +55,7 @@
     "5": {
       "Id": 5,
       "Name": "Marisa Kirisame (Lunar War Enchanter)",
+      "ShortName": "Marisa (Enchanter)",
       "Universe": "B3",
       "Portrait": "Chara_Square_Thumbnail_300201.webp",
       "Tier": "EX",
@@ -63,6 +68,7 @@
     "6": {
       "Id": 6,
       "Name": "Junko (Nameless Space Terror)",
+      "ShortName": "Junko (Space)",
       "Universe": "B2",
       "Portrait": "Chara_Square_Thumbnail_205701.webp",
       "Tier": "EX",
@@ -75,6 +81,7 @@
     "7": {
       "Id": 7,
       "Name": "Tewi Inaba",
+      "ShortName": "Tewi",
       "Universe": "L1",
       "Portrait": "104201_Tewi_Inaba_SQ.webp",
       "Tier": "S\u002B",
@@ -87,6 +94,7 @@
     "8": {
       "Id": 8,
       "Name": "Suika Ibuki",
+      "ShortName": "Suika",
       "Universe": "L1",
       "Portrait": "104801_Suika_Ibuki_SQ.webp",
       "Tier": "S\u002B",
@@ -99,6 +107,7 @@
     "9": {
       "Id": 9,
       "Name": "Iku Nagae",
+      "ShortName": "Iku",
       "Universe": "L1",
       "Portrait": "Square_Thumbnail_109001.webp",
       "Tier": "S\u002B",
@@ -111,6 +120,7 @@
     "10": {
       "Id": 10,
       "Name": "Shion Yorigami",
+      "ShortName": "Shion",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106601_0.webp",
       "Tier": "S\u002B",
@@ -123,6 +133,7 @@
     "11": {
       "Id": 11,
       "Name": "Doremy Sweet",
+      "ShortName": "Doremy",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108001.webp",
       "Tier": "S",
@@ -135,6 +146,7 @@
     "12": {
       "Id": 12,
       "Name": "Hong Meiling",
+      "ShortName": "Meiling",
       "Universe": "L1",
       "Portrait": "100701_Hong_Meiling_SQ.webp",
       "Tier": "S",
@@ -146,7 +158,8 @@
     },
     "13": {
       "Id": 13,
-      "Name": "Rin kaenbyou",
+      "Name": "Rin Kaenbyou",
+      "ShortName": "Rin",
       "Universe": "L1",
       "Portrait": "Chara_SQ_105201.webp",
       "Tier": "S",
@@ -159,6 +172,7 @@
     "14": {
       "Id": 14,
       "Name": "Minamitsu Murasa",
+      "ShortName": "Murasa",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_107501.webp",
       "Tier": "S",
@@ -171,6 +185,7 @@
     "15": {
       "Id": 15,
       "Name": "Youmu Konpaku (Cherry Blossom)",
+      "ShortName": "Youmu (Cherry Blossom)",
       "Universe": "A7",
       "Portrait": "Chara_Square_Thumbnail_401101.webp",
       "Tier": "S",
@@ -183,6 +198,7 @@
     "16": {
       "Id": 16,
       "Name": "Medicine Melancholy",
+      "ShortName": "Medicine",
       "Universe": "L1",
       "Portrait": "103601_Medicine_Melancholy_SQ.webp",
       "Tier": "S",
@@ -195,6 +211,7 @@
     "17": {
       "Id": 17,
       "Name": "Yuuka Kazami",
+      "ShortName": "Yuuka",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108401.webp",
       "Tier": "S",
@@ -207,6 +224,7 @@
     "18": {
       "Id": 18,
       "Name": "Koakuma",
+      "ShortName": "Koakuma",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_100801.webp",
       "Tier": "A\u002B",
@@ -219,6 +237,7 @@
     "19": {
       "Id": 19,
       "Name": "Cirno (Scarlet)",
+      "ShortName": "Cirno (Scarlet)",
       "Universe": "A6",
       "Portrait": "203001_thumbnail.webp",
       "Tier": "A\u002B",
@@ -231,6 +250,7 @@
     "20": {
       "Id": 20,
       "Name": "Watatsuki no Toyohime (Plentiful Temple of Wealth and Equality)",
+      "ShortName": "Toyohime (Temple)",
       "Universe": "B3",
       "Portrait": "Chara_Square_Thumbnail_201601.webp",
       "Tier": "EX",
@@ -243,6 +263,7 @@
     "21": {
       "Id": 21,
       "Name": "Reimu Hakurei (Lunar War Shaman)",
+      "ShortName": "Reimu (Shaman)",
       "Universe": "B3",
       "Portrait": "3011reimu.webp",
       "Tier": "EX",
@@ -255,6 +276,7 @@
     "22": {
       "Id": 22,
       "Name": "Watatsuki no Yorihime (Peace Temple of Modesty and Devotion)",
+      "ShortName": "Yorihime (Temple)",
       "Universe": "B3",
       "Portrait": "Chara_Square_Thumbnail_201701.webp",
       "Tier": "EX",
@@ -267,6 +289,7 @@
     "23": {
       "Id": 23,
       "Name": "Marisa Kirisame (Witch of Scarlet Dreams)",
+      "ShortName": "Marisa (WoSD)",
       "Universe": "Z1",
       "Portrait": "200201_Marisa_Kirisame_WoSD_SQ.webp",
       "Tier": "EX",
@@ -279,6 +302,7 @@
     "24": {
       "Id": 24,
       "Name": "Reisen Udongein Inaba (Lunar War Soldier)",
+      "ShortName": "Reisen (Lunar)",
       "Universe": "B3",
       "Portrait": "Chara_Square_Thumbnail_301501.webp",
       "Tier": "EX",
@@ -291,6 +315,7 @@
     "25": {
       "Id": 25,
       "Name": "Youmu Konpaku (Mysterious Sword Master)",
+      "ShortName": "Youmu (MSM)",
       "Universe": "R8",
       "Portrait": "Chara_Square_Thumbnail_201101.webp",
       "Tier": "S\u002B",
@@ -302,7 +327,8 @@
     },
     "26": {
       "Id": 26,
-      "Name": "Yuyuko Saigyouji (Tyny Ghost Mistress)",
+      "Name": "Yuyuko Saigyouji (Tiny Ghost Mistress)",
+      "ShortName": "Yuyuko (Smol)",
       "Universe": "R2",
       "Portrait": "Square_15637.webp",
       "Tier": "S\u002B",
@@ -315,6 +341,7 @@
     "27": {
       "Id": 27,
       "Name": "Marisa Kirisame (Scarlet)",
+      "ShortName": "Marisa (Scarlet)",
       "Universe": "A6",
       "Portrait": "Chara_Square_Thumbnail_400201.webp",
       "Tier": "S\u002B",
@@ -327,6 +354,7 @@
     "28": {
       "Id": 28,
       "Name": "Sagume Kishin",
+      "ShortName": "Sagume",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108101_0.webp",
       "Tier": "S\u002B",
@@ -339,6 +367,7 @@
     "29": {
       "Id": 29,
       "Name": "Sakuya Izayoi (Scarlet)",
+      "ShortName": "Sakuya (Scarlet)",
       "Universe": "A6",
       "Portrait": "Chara_Square_Thumbnail_400501.webp",
       "Tier": "S\u002B",
@@ -351,6 +380,7 @@
     "30": {
       "Id": 30,
       "Name": "Sanae Kochiya (Lunar War Oracle)",
+      "ShortName": "Sanae (Oracle)",
       "Universe": "B3",
       "Portrait": "Chara_Square_Thumbnail_303701.webp",
       "Tier": "S\u002B",
@@ -363,6 +393,7 @@
     "31": {
       "Id": 31,
       "Name": "Aya Shameimaru (Flower)",
+      "ShortName": "Aya (Flower)",
       "Universe": "A9",
       "Portrait": "Square_6_updated.webp",
       "Tier": "S\u002B",
@@ -375,6 +406,7 @@
     "32": {
       "Id": 32,
       "Name": "Reisen Udongein Inaba (Eternal)",
+      "ShortName": "Reisen (Eternal)",
       "Universe": "A8",
       "Portrait": "Square_7_updated.webp",
       "Tier": "S\u002B",
@@ -387,6 +419,7 @@
     "33": {
       "Id": 33,
       "Name": "Sakuya Izayoi (Lunar War Servant)",
+      "ShortName": "Sakuya (Servant)",
       "Universe": "B3",
       "Portrait": "Chara_Square_Thumbnail_300501.webp",
       "Tier": "S\u002B",
@@ -399,6 +432,7 @@
     "34": {
       "Id": 34,
       "Name": "Hecatia Lapislazuli",
+      "ShortName": "Hecatia",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_105601_0.webp",
       "Tier": "S\u002B",
@@ -411,6 +445,7 @@
     "35": {
       "Id": 35,
       "Name": "Saki Kurokoma",
+      "ShortName": "Saki",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_111001.webp",
       "Tier": "S\u002B",
@@ -423,6 +458,7 @@
     "36": {
       "Id": 36,
       "Name": "Kasen Ibaraki",
+      "ShortName": "IbaraKasen",
       "Universe": "L1",
       "Portrait": "102501_Kasen_Ibaraki_SQ.webp",
       "Tier": "S",
@@ -435,6 +471,7 @@
     "37": {
       "Id": 37,
       "Name": "Utsuho Reiuji",
+      "ShortName": "Utsuho",
       "Universe": "L1",
       "Portrait": "Char_Square_Thumbnail_105301.webp",
       "Tier": "S",
@@ -447,6 +484,7 @@
     "38": {
       "Id": 38,
       "Name": "Merlin PrismRiver",
+      "ShortName": "Merlin",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106301.webp",
       "Tier": "S",
@@ -459,6 +497,7 @@
     "39": {
       "Id": 39,
       "Name": "Tenshi Hinanawi",
+      "ShortName": "Tenshi",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108901_0.webp",
       "Tier": "S",
@@ -471,6 +510,7 @@
     "40": {
       "Id": 40,
       "Name": "Byakuren Hijiri (Fantastic)",
+      "ShortName": "Byakuren (Fantastic)",
       "Universe": null,
       "Portrait": "Chara_Square_Thumbnail_202401_0.webp",
       "Tier": "S",
@@ -483,6 +523,7 @@
     "41": {
       "Id": 41,
       "Name": "Youmu Konpaku",
+      "ShortName": "Youmu",
       "Universe": "L1",
       "Portrait": "101101_Youmu_Konpaku_SQ.webp",
       "Tier": "A\u002B",
@@ -495,6 +536,7 @@
     "42": {
       "Id": 42,
       "Name": "Koishi Komeiji",
+      "ShortName": "Koishi",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_105101.webp",
       "Tier": "A\u002B",
@@ -507,6 +549,7 @@
     "43": {
       "Id": 43,
       "Name": "Sekibanki",
+      "ShortName": "Sekibanki",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_107901.webp",
       "Tier": "A\u002B",
@@ -519,6 +562,7 @@
     "44": {
       "Id": 44,
       "Name": "Toyosatomimi no Miko",
+      "ShortName": "Toyosatomimi",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_109101.webp",
       "Tier": "A\u002B",
@@ -531,6 +575,7 @@
     "45": {
       "Id": 45,
       "Name": "Shou Toramaru",
+      "ShortName": "Shou",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_107401_0.webp",
       "Tier": "A\u002B",
@@ -543,6 +588,7 @@
     "46": {
       "Id": 46,
       "Name": "Keine Kamishirasawa",
+      "ShortName": "Keine",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_107201.webp",
       "Tier": "A\u002B",
@@ -555,6 +601,7 @@
     "47": {
       "Id": 47,
       "Name": "Okina Matara",
+      "ShortName": "Okina",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106901.webp",
       "Tier": "A\u002B",
@@ -567,6 +614,7 @@
     "48": {
       "Id": 48,
       "Name": "Watatsuki no Yorihime",
+      "ShortName": "Yorihime",
       "Universe": "L1",
       "Portrait": "101701_Watatsuki_no_Yorihime_SQ_0.webp",
       "Tier": "A\u002B",
@@ -579,6 +627,7 @@
     "49": {
       "Id": 49,
       "Name": "Suwako Moriya",
+      "ShortName": "Suwako",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_103901.webp",
       "Tier": "A\u002B",
@@ -591,6 +640,7 @@
     "50": {
       "Id": 50,
       "Name": "Kaguya Houraisan",
+      "ShortName": "Kaguya",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_101901.webp",
       "Tier": "A\u002B",
@@ -603,6 +653,7 @@
     "51": {
       "Id": 51,
       "Name": "Yukari Yakumo",
+      "ShortName": "Yukari",
       "Universe": "L1",
       "Portrait": "100901_Yukari_Yakumo_SQ.webp",
       "Tier": "A\u002B",
@@ -615,6 +666,7 @@
     "52": {
       "Id": 52,
       "Name": "Remilia Scarlet",
+      "ShortName": "Remilia",
       "Universe": "L1",
       "Portrait": "100301_Remilia_Scarlet_SQ.webp",
       "Tier": "A\u002B",
@@ -627,6 +679,7 @@
     "53": {
       "Id": 53,
       "Name": "Ran Yakumo",
+      "ShortName": "Ran",
       "Universe": "L1",
       "Portrait": "101301_Ran_Yakumo_SQ.webp",
       "Tier": "A\u002B",
@@ -639,6 +692,7 @@
     "54": {
       "Id": 54,
       "Name": "Chen",
+      "ShortName": "Chen",
       "Universe": "L1",
       "Portrait": "101401_Chen_SQ.webp",
       "Tier": "A",
@@ -651,6 +705,7 @@
     "55": {
       "Id": 55,
       "Name": "Fujiwara no Mokou",
+      "ShortName": "Mokou",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_102001.webp",
       "Tier": "A",
@@ -663,6 +718,7 @@
     "56": {
       "Id": 56,
       "Name": "Momiji Inubashiri",
+      "ShortName": "Momiji",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_104601.webp",
       "Tier": "D",
@@ -675,6 +731,7 @@
     "57": {
       "Id": 57,
       "Name": "Seiran",
+      "ShortName": "Seiran",
       "Universe": "L1",
       "Portrait": "102101_Seiran_SQ.webp",
       "Tier": "D",
@@ -687,6 +744,7 @@
     "58": {
       "Id": 58,
       "Name": "Reisen",
+      "ShortName": "Reisen",
       "Universe": "L1",
       "Portrait": "102301_Reisen_SQ.webp",
       "Tier": "D",
@@ -699,6 +757,7 @@
     "59": {
       "Id": 59,
       "Name": "Byakuren Hijiri",
+      "ShortName": "Byakuren",
       "Universe": "L1",
       "Portrait": "102401_Byakuren_Hijiri_SQ.webp",
       "Tier": "D",
@@ -711,6 +770,7 @@
     "60": {
       "Id": 60,
       "Name": "Sunny Milk",
+      "ShortName": "Sunny Milk",
       "Universe": "L1",
       "Portrait": "103301_Sunny_Milk_SQ.webp",
       "Tier": "D",
@@ -723,6 +783,7 @@
     "61": {
       "Id": 61,
       "Name": "Nitori Kawashiro",
+      "ShortName": "Nitori",
       "Universe": "L1",
       "Portrait": "104001_Nitori_Kawashiro_SQ.webp",
       "Tier": "D",
@@ -735,6 +796,7 @@
     "62": {
       "Id": 62,
       "Name": "Lily White",
+      "ShortName": "Lily White",
       "Universe": "L1",
       "Portrait": "101201_Lily_White_SQ.webp",
       "Tier": "D",
@@ -747,6 +809,7 @@
     "63": {
       "Id": 63,
       "Name": "Yoshika Miyako",
+      "ShortName": "Yoshika",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108601.webp",
       "Tier": "C",
@@ -759,6 +822,7 @@
     "64": {
       "Id": 64,
       "Name": "Komachi Onozuka",
+      "ShortName": "Komachi",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_105401.webp",
       "Tier": "C",
@@ -771,6 +835,7 @@
     "65": {
       "Id": 65,
       "Name": "Yatsuhashi Tsukumo",
+      "ShortName": "Yatsuhashi",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106801.webp",
       "Tier": "C",
@@ -783,6 +848,7 @@
     "66": {
       "Id": 66,
       "Name": "Benben Tsukumo",
+      "ShortName": "Benben",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106701.webp",
       "Tier": "C",
@@ -795,6 +861,7 @@
     "67": {
       "Id": 67,
       "Name": "Kanako Yasaka",
+      "ShortName": "Kanako",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_103801.webp",
       "Tier": "C",
@@ -807,6 +874,7 @@
     "68": {
       "Id": 68,
       "Name": "Star Sapphire",
+      "ShortName": "Star Sapphire",
       "Universe": "L1",
       "Portrait": "103501_Star_Sapphire_SQ.webp",
       "Tier": "C",
@@ -819,6 +887,7 @@
     "69": {
       "Id": 69,
       "Name": "Sanae Kochiya",
+      "ShortName": "Sanae",
       "Universe": "L1",
       "Portrait": "103701_Sanae_Kochiya_SQ.webp",
       "Tier": "C",
@@ -831,6 +900,7 @@
     "70": {
       "Id": 70,
       "Name": "Daiyousei",
+      "ShortName": "Daiyousei",
       "Universe": "L1",
       "Portrait": "103101_Daiyousei_SQ.webp",
       "Tier": "C",
@@ -843,6 +913,7 @@
     "71": {
       "Id": 71,
       "Name": "Sakuya Izayoi",
+      "ShortName": "Sakuya",
       "Universe": "L1",
       "Portrait": "100501_Sakuya_Izayoi_SQ.webp",
       "Tier": "C",
@@ -855,6 +926,7 @@
     "72": {
       "Id": 72,
       "Name": "Letty Whiterock",
+      "ShortName": "Letty",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108801.webp",
       "Tier": "B",
@@ -867,6 +939,7 @@
     "73": {
       "Id": 73,
       "Name": "Cirno",
+      "ShortName": "Cirno",
       "Universe": "L1",
       "Portrait": "103001_Cirno_SQ.webp",
       "Tier": "B",
@@ -879,6 +952,7 @@
     "74": {
       "Id": 74,
       "Name": "Alice Margatroid",
+      "ShortName": "Alice",
       "Universe": "L1",
       "Portrait": "103201_Alice_Margatroid_SQ.webp",
       "Tier": "B",
@@ -891,6 +965,7 @@
     "75": {
       "Id": 75,
       "Name": "Luna Child",
+      "ShortName": "Luna Child",
       "Universe": "L1",
       "Portrait": "103401_Luna_Child_SQ.webp",
       "Tier": "B",
@@ -903,6 +978,7 @@
     "76": {
       "Id": 76,
       "Name": "Flandre Scarlet",
+      "ShortName": "Flandre",
       "Universe": "L1",
       "Portrait": "100401_Flandre_Scarlet_SQ.webp",
       "Tier": "B",
@@ -915,6 +991,7 @@
     "77": {
       "Id": 77,
       "Name": "Kosuzu Motoori",
+      "ShortName": "Kosuzu",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_102601.webp",
       "Tier": "B-",
@@ -927,6 +1004,7 @@
     "78": {
       "Id": 78,
       "Name": "Ringo",
+      "ShortName": "Ringo",
       "Universe": "L1",
       "Portrait": "102201_Ringo_SQ.webp",
       "Tier": "B",
@@ -939,6 +1017,7 @@
     "79": {
       "Id": 79,
       "Name": "Hieda no Akyuu",
+      "ShortName": "Akyuu",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_102901.webp",
       "Tier": "B",
@@ -951,6 +1030,7 @@
     "80": {
       "Id": 80,
       "Name": "Shizuha Aki",
+      "ShortName": "Shizuha",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_105901.webp",
       "Tier": "B",
@@ -963,6 +1043,7 @@
     "81": {
       "Id": 81,
       "Name": "Reisen Udongein Inaba",
+      "ShortName": "Reisen",
       "Universe": "L1",
       "Portrait": "101501_Reisen_Udongein_Inaba_SQ.webp",
       "Tier": "B",
@@ -975,6 +1056,7 @@
     "82": {
       "Id": 82,
       "Name": "Aya Shameimaru",
+      "ShortName": "Aya",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_104401.webp",
       "Tier": "B",
@@ -987,6 +1069,7 @@
     "83": {
       "Id": 83,
       "Name": "Lyrica Prismriver",
+      "ShortName": "Lyrica",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106401.webp",
       "Tier": "B",
@@ -999,6 +1082,7 @@
     "84": {
       "Id": 84,
       "Name": "Nemuno Sakata",
+      "ShortName": "Nemuno",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_104701_0.webp",
       "Tier": "B",
@@ -1011,6 +1095,7 @@
     "85": {
       "Id": 85,
       "Name": "Hina Kagiyama",
+      "ShortName": "Hina",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106101.webp",
       "Tier": "B",
@@ -1023,6 +1108,7 @@
     "86": {
       "Id": 86,
       "Name": "Hatate Himekaidou",
+      "ShortName": "Hatate",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_104501_0.webp",
       "Tier": "B",
@@ -1035,6 +1121,7 @@
     "87": {
       "Id": 87,
       "Name": "Joon Yorigami",
+      "ShortName": "Joon",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106501_0.webp",
       "Tier": "B",
@@ -1047,6 +1134,7 @@
     "88": {
       "Id": 88,
       "Name": "Clownpiece",
+      "ShortName": "Clownpiece",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_105801.webp",
       "Tier": "B",
@@ -1059,6 +1147,7 @@
     "89": {
       "Id": 89,
       "Name": "Lunasa Prismriver",
+      "ShortName": "Lunasa",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106201.webp",
       "Tier": "B",
@@ -1071,6 +1160,7 @@
     "90": {
       "Id": 90,
       "Name": "Junko",
+      "ShortName": "Junko",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_105701.webp",
       "Tier": "B",
@@ -1083,6 +1173,7 @@
     "91": {
       "Id": 91,
       "Name": "Satori Komeiji",
+      "ShortName": "Satori",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_105001.webp",
       "Tier": "B",
@@ -1095,6 +1186,7 @@
     "92": {
       "Id": 92,
       "Name": "Patchouli Knowledge",
+      "ShortName": "Patchouli",
       "Universe": "L1",
       "Portrait": "100601_Patchouli_Knowledge_SQ.webp",
       "Tier": "B",
@@ -1107,6 +1199,7 @@
     "93": {
       "Id": 93,
       "Name": "Seiga kaku",
+      "ShortName": "Seiga",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108501.webp",
       "Tier": "A",
@@ -1119,6 +1212,7 @@
     "94": {
       "Id": 94,
       "Name": "Mai Teireida",
+      "ShortName": "Mai",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_107101.webp",
       "Tier": "A",
@@ -1131,6 +1225,7 @@
     "95": {
       "Id": 95,
       "Name": "Satono Nishida",
+      "ShortName": "Satono",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_107001.webp",
       "Tier": "A",
@@ -1143,6 +1238,7 @@
     "96": {
       "Id": 96,
       "Name": "Hata no Kokoro",
+      "ShortName": "Hata",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108701.webp",
       "Tier": "A",
@@ -1155,6 +1251,7 @@
     "97": {
       "Id": 97,
       "Name": "Mamizou Futatsuiwa",
+      "ShortName": "Mamizou",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_108201.webp",
       "Tier": "A",
@@ -1167,6 +1264,7 @@
     "98": {
       "Id": 98,
       "Name": "Yuugi Hoshiguma",
+      "ShortName": "Yuugi",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_104901.webp",
       "Tier": "A",
@@ -1179,6 +1277,7 @@
     "99": {
       "Id": 99,
       "Name": "Rumia",
+      "ShortName": "Rumia",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_107301.webp",
       "Tier": "A",
@@ -1191,6 +1290,7 @@
     "100": {
       "Id": 100,
       "Name": "Eirin Yagokoro",
+      "ShortName": "Eirin",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_101801.webp",
       "Tier": "A",
@@ -1203,6 +1303,7 @@
     "101": {
       "Id": 101,
       "Name": "Minoriko Aki",
+      "ShortName": "Minoriko",
       "Universe": "L1",
       "Portrait": "Chara_Square_Thumbnail_106001.webp",
       "Tier": "A\u002B",
@@ -1215,6 +1316,7 @@
     "102": {
       "Id": 102,
       "Name": "Sagume Kishin (Codename: Azusa)",
+      "ShortName": "Sagume (Azusa)",
       "Universe": "B3",
       "Portrait": "208101_thumbnail.webp",
       "Tier": "EX",
