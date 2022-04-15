@@ -481,7 +481,7 @@
       "url": "images\/portraits\/Square_Thumbnail_109001.webp"
     },
     {
-      "hash": "sha256-\/ammcUfwj4deC3JCEJZ+pdR1muY7BZMChmV7LwAQGx0=",
+      "hash": "sha256-bGRlGcjU6wifwLdtIL+BhfD\/tE6OE3DNPVV0Z1Wcdk0=",
       "url": "index.html"
     },
     {
@@ -1009,5 +1009,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "cSP8w4qE"
+  "version": "sIhxVjwx"
 };
