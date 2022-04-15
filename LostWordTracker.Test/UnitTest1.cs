@@ -64,7 +64,12 @@ namespace LostWordTracker.Test
                 Awakening = 5,
                 Level = 100,
                 LimitBreak = 5,
-                Obtained = true
+                Obtained = true,
+                Skill1 = 10,
+                Skill2 = 10,
+                Skill3 = 10,
+                Rebirth = true,
+                Rank = 5
             },
             new CharacterStorage()
             {
@@ -72,7 +77,12 @@ namespace LostWordTracker.Test
                 Awakening = 0,
                 Level = 1,
                 LimitBreak = 0,
-                Obtained = false
+                Obtained = false,
+                Skill1 = 0,
+                Skill2 = 0,
+                Skill3 = 0,
+                Rebirth = false,
+                Rank = 5
             }
         };
 
@@ -311,14 +321,15 @@ namespace LostWordTracker.Test
             var data = await dataService.LoadData();
 
             data.Characters.Should().NotBeNullOrEmpty().And.ContainKeys(new int[] { 1, 2 });
-            data.CharacterStorage.Should().NotBeNullOrEmpty().And.NotContainEquivalentOf(_testSaveData[0]).And.ContainEquivalentOf(new CharacterStorage()
-            {
-                Id = 1,
-                Awakening = 0,
-                Level = 0,
-                LimitBreak =0,
-                Obtained = false
-            });
+            data.CharacterStorage.Should().NotBeNullOrEmpty().And.NotContainEquivalentOf(_testSaveData[0]).And.ContainEquivalentOf(new CharacterStorage() { Id = 1}
+            //{
+            //    Id = 1,
+            //    Awakening = 0,
+            //    Level = 0,
+            //    LimitBreak =0,
+            //    Obtained = false
+            //}
+            );
         }
 
     }

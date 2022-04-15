@@ -38,7 +38,7 @@
             }
             <div class="@((ShouldShow(context, currentCharData) ? "character" : "hide" ))">
 
-                <img class="portrait" src="@MakePathString(currentCharData.Portrait)" />
+                <img class="portrait" src="@MakePathString(currentCharData.Portrait)" @onclick="@(e => ImageClicked(currentCharData, context))" />
                 <div class="characterName">@currentCharData.Name</div>
                 <Badge>@currentCharData.Universe</Badge>
                 @switch (@currentCharData.Tier)
@@ -69,11 +69,13 @@
                         break;
                 }
                 @*<Check @bind-Checked="@context.Obtained">Obtained</Check>*@
-                
-                <div class="characterData1">LB
+
+                <div class="characterData1">
+                    LB
                     <Rating Color="Color.Primary" @bind-SelectedValue="@context.LimitBreak" MaxValue="5"></Rating>
                 </div>
-                <div class="characterData1">AW
+                <div class="characterData1">
+                    AW
                     <Rating Color="Color.Secondary" @bind-SelectedValue="@context.Awakening" MaxValue="5"></Rating>
                 </div>
             </div>
@@ -83,11 +85,51 @@
     </div>
 }
 
+@*@if (modalCharacterDefinition != null && modalCharacterStorage != null)
+{*@
+<Modal @ref="_characterModalRef">
+    @if (modalCharacterDefinition != null && modalCharacterStorage != null)
+    {
+        <ModalContent Centered>
+            <ModalHeader><ModalTitle>@modalCharacterDefinition.Name</ModalTitle>  <CloseButton></CloseButton></ModalHeader>
+            <ModalBody>
+                <Field>
+                    <FieldLabel>Rebirth</FieldLabel>
+                    <Switch @bind-Checked="@modalCharacterStorage.Rebirth"></Switch>
+                </Field>
+                <Field>
+                    <FieldLabel>Rank</FieldLabel>
+                    <NumericEdit @bind-Value="@modalCharacterStorage.Rank"></NumericEdit>
+                </Field>
+                <Field>
+                    <FieldLabel>Level</FieldLabel>
+                    <NumericEdit @bind-Value="@modalCharacterStorage.Level"></NumericEdit>
+                </Field>
+                <Field>
+                    <FieldLabel>Skill 1 Level</FieldLabel>
+                    <NumericEdit @bind-Value="@modalCharacterStorage.Skill1"></NumericEdit>
+                </Field>
+                <Field>
+                    <FieldLabel>Skill 2 Level</FieldLabel>
+                    <NumericEdit @bind-Value="@modalCharacterStorage.Skill2"></NumericEdit>
+                </Field>
+                <Field>
+                    <FieldLabel>Skill 3 Level</FieldLabel>
+                    <NumericEdit @bind-Value="@modalCharacterStorage.Skill3"></NumericEdit>
+                </Field>
+            </ModalBody>
+        </ModalContent>
+    }
+</Modal>
+@*}*@
 
 
 
 @code {
     [Inject] INotificationService NotificationService { get; set; }
+
+    private Modal _characterModalRef;
+
     private bool ShouldShow(CharacterStorage context, CharacterDefinition currentCharData)
     {
         if (!currentCharData.Enabled) return false;
@@ -149,5 +191,15 @@
     private async Task ToggleView()
     {
         _showOnlyObtained = !_showOnlyObtained;
+    }
+
+    CharacterDefinition modalCharacterDefinition;
+    CharacterStorage modalCharacterStorage;
+
+    private async Task ImageClicked(CharacterDefinition characterDefinition, CharacterStorage characterStorage)
+    {
+        modalCharacterDefinition = characterDefinition;
+        modalCharacterStorage = characterStorage;
+        await _characterModalRef.Show();
     }
 }

@@ -12,6 +12,8 @@
         public int LimitBreak { get; set; }
         public int Awakening { get; set; }
 
+        public bool Rebirth { get; set; }
+
         public CharacterStorage()
         {
             Id = 0;
@@ -19,6 +21,11 @@
             Level = 0;
             LimitBreak = 0;
             Awakening = 0;
+            Skill1 = 0;
+            Skill2 = 0;
+            Skill3 = 0;
+            Rank = 0;
+            Rebirth = false;
         }
 
         public CharacterStorage(int id)
@@ -28,6 +35,11 @@
             Level = 0;
             LimitBreak = 0;
             Awakening = 0;
+            Skill1 = 0;
+            Skill2 = 0;
+            Skill3 = 0;
+            Rank = 0;
+            Rebirth = false;
         }
         
     }

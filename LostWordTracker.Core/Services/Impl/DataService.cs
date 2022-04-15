@@ -76,6 +76,12 @@ namespace LostWordTracker.Services.Impl
                     Obtained = loadedChar.Obtained, // unused flag
                     LimitBreak = loadedChar.LimitBreak ,
                     Awakening = loadedChar.Awakening,
+                    Rank = loadedChar.Rank,
+                    Rebirth = loadedChar.Rebirth,
+                    Skill1 = loadedChar.Skill1,
+                    Skill3 = loadedChar.Skill3,
+                    Skill2 = loadedChar.Skill2
+                    
                 });
             }
 
@@ -114,7 +120,12 @@ namespace LostWordTracker.Services.Impl
                     Level = loadedChar.Level,
                     Obtained = loadedChar.Obtained,
                     LimitBreak = loadedChar.LimitBreak,
-                    Awakening = loadedChar.Awakening
+                    Awakening = loadedChar.Awakening,
+                    Rank = loadedChar.Rank,
+                    Rebirth = loadedChar.Rebirth,
+                    Skill1 = loadedChar.Skill1,
+                    Skill3 = loadedChar.Skill3,
+                    Skill2 = loadedChar.Skill2
                 });
             }
 

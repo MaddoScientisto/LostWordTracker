@@ -97,19 +97,19 @@ namespace LostWordTracker.Core.Services.Impl
 
                 image.Mutate(x => x.DrawText(options, currentBaseChar.ShortName, Color.Black));
 
-                DrawStars(image, 5, 10 + cursorX, cursorY + 150, Color.Black);
-                DrawStars(image, item.LimitBreak, 10 + cursorX, cursorY + 150, Color.Red);
+                DrawStars(image, 5, 10 + cursorX, cursorY + 140, Color.Black);
+                DrawStars(image, item.LimitBreak, 10 + cursorX, cursorY + 140, Color.Red);
 
-                DrawStars(image, 5, 10 + cursorX, cursorY + 170, Color.Black);
-                DrawStars(image, item.Awakening, 10 + cursorX, cursorY + 170, Color.Gold);
+                DrawStars(image, 5, 10 + cursorX, cursorY + 160, Color.Black);
+                DrawStars(image, item.Awakening, 10 + cursorX, cursorY + 160, Color.Gold);
 
                 if (drawLevel)
                 {
-                    image.Mutate(x => x.DrawText($"Lv: {item.Level}", font, Color.Black, new PointF(cursorX, cursorY + 180)));
+                    image.Mutate(x => x.DrawText($"Lv: {item.Level}", font, Color.Black, new PointF(cursorX, cursorY + 170)));
                 }
                 if (drawSkills)
                 {
-                    image.Mutate(x => x.DrawText($"{item.Skill1}/{item.Skill2}/{item.Skill3}", font, Color.Black, new PointF(cursorX + 40, cursorY + 180)));
+                    image.Mutate(x => x.DrawText($"{item.Skill1}/{item.Skill2}/{item.Skill3}", font, Color.Black, new PointF(cursorX + 60, cursorY + 170)));
                 }
 
                 i++;
@@ -135,10 +135,22 @@ namespace LostWordTracker.Core.Services.Impl
         {
             for (int index = 0; index < count; index++)
             {
-                IPath starPolygon = new Star(x: x + 20f * index, y: y, prongs: 5, innerRadii: 5.0f, outerRadii: 10.0f, 180);
+                IPath starPolygon = new Star(x: x + 20f * index, y: y, prongs: 5, innerRadii: 5.0f, outerRadii: 10.0f, 190);
 
                 baseImage.Mutate(x => x.Fill(color, starPolygon));
             }
         }
+
+        //private void DrawCards(Image baseImage, int count, int x, int y, Color color)
+        //{
+        //    for (int index = 0; index < count; index++)
+        //    {
+        //        IPath polygon = new Rectangle(x + 20f * index, y, 10, 10, )
+
+        //        IPath starPolygon = new Star(x: x + 20f * index, y: y, prongs: 5, innerRadii: 5.0f, outerRadii: 10.0f, 190);
+
+        //        baseImage.Mutate(x => x.Fill(color, starPolygon));
+        //    }
+        //}
     }
 }
