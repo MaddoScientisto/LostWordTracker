@@ -485,7 +485,7 @@
       "url": "images\/portraits\/Square_Thumbnail_109001.webp"
     },
     {
-      "hash": "sha256-gGiZ9tR8Djn8Wc6ugM8lKdNTCKFVEAiwR7OpUiSE5Jo=",
+      "hash": "sha256-WdDr+8d3MkeUTVDKUtJp0qgR+ACcT0xrGhpA7MFUOzc=",
       "url": "index.html"
     },
     {
@@ -529,7 +529,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-mrG6SMof\/EST3GuqKsEbUZ+Ex4EEaikiDkamlprmD9U=",
+      "hash": "sha256-x\/Vrgx8ChHiMQBYadDGu8uzIaQfoKf3BlaKCPvKR27I=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -573,7 +573,7 @@
       "url": "_framework\/LostWordTracker.Core.dll"
     },
     {
-      "hash": "sha256-1y8qtPBZ7P1Vl59vd5gMQBub\/lr\/BzDCm27wqqkic80=",
+      "hash": "sha256-aI3busvXcTJ4Rm1HiQzPP7LandKtoUJ6lZ+C4S8qcRs=",
       "url": "_framework\/LostWordTracker.dll"
     },
     {
@@ -585,7 +585,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
-      "hash": "sha256-RzG14vnfPy271SUFRkhdaFMJaVtGoKPEfppnzsewH4I=",
+      "hash": "sha256-iZmtitZAOoGa0H\/MrjodoFpS7RSqgj2A4P85QscwI4c=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -1013,5 +1013,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "r5KfSj4M"
+  "version": "MdskzS0w"
 };
