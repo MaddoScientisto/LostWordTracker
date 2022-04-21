@@ -37,10 +37,17 @@
                 var currentCharData = _characterDefinitions.Characters[context.Id];
             }
             <div class="@((ShouldShow(context, currentCharData) ? "character" : "hide" ))">
-
-                <img class="portrait" src="@MakePathString(currentCharData.Portrait)" @onclick="@(e => ImageClicked(currentCharData, context))" />
+                @if(currentCharData.HasRebirth && context.Rebirth)
+                {
+                    <img class="portrait" src="@MakePathString(currentCharData.RebirthPortrait)" @onclick="@(e => ImageClicked(currentCharData, context))" />
+                }
+                else
+                {
+                    <img class="portrait" src="@MakePathString(currentCharData.Portrait)" @onclick="@(e => ImageClicked(currentCharData, context))" />
+                }
+                
                 <div class="characterName">@currentCharData.Name</div>
-                <Badge>@currentCharData.Universe</Badge>
+                <Badge Color="Color.Light">@currentCharData.Universe</Badge>
                 @switch (@currentCharData.Tier)
                 {
                     case "EX":
@@ -70,6 +77,19 @@
                 }
                 @*<Check @bind-Checked="@context.Obtained">Obtained</Check>*@
 
+                @switch(@currentCharData.ObtainType)
+                {
+                    case "Pray":
+
+                        break;
+                        case "Fes":
+                        <Badge Color="Color.Warning">FES</Badge>
+                        break;
+                        case "Sfes":
+                        <Badge Color="Color.Info">SFES</Badge>
+                        break;
+                }
+
                 <div class="characterData1">
                     LB
                     <Rating Color="Color.Primary" @bind-SelectedValue="@context.LimitBreak" MaxValue="5"></Rating>
@@ -94,10 +114,13 @@
             <ModalHeader><ModalTitle>@modalCharacterDefinition.Name</ModalTitle>  <CloseButton></CloseButton></ModalHeader>
             <ModalBody>
                 <Button Color="Color.Primary" Clicked="(e => MaxCharacter(modalCharacterStorage))">Max All</Button>
-                <Field>
+                @if (modalCharacterDefinition.HasRebirth)
+                {
+                       <Field>
                     <FieldLabel>Rebirth</FieldLabel>
                     <Switch @bind-Checked="@modalCharacterStorage.Rebirth"></Switch>
                 </Field>
+                }             
                 <Field>
                     <FieldLabel>Rank</FieldLabel>
                     <NumericEdit @bind-Value="@modalCharacterStorage.Rank"></NumericEdit>
@@ -124,11 +147,12 @@
 </Modal>
 @*}*@
 
-
+<SnackbarStack @ref="snackbarStack" Location="SnackbarStackLocation.End" />
 
 @code {
     [Inject] INotificationService NotificationService { get; set; }
-
+    SnackbarStack snackbarStack;
+    double intervalBeforeMsgClose = 2000;
     private Modal _characterModalRef;
 
     private bool ShouldShow(CharacterStorage context, CharacterDefinition currentCharData)
@@ -167,6 +191,7 @@
     {
         await _dataService.SaveData(_characterDefinitions);
         await NotificationService.Success("Data saved");
+        await snackbarStack.PushAsync("Data saved", SnackbarColor.Success);
         //await _localStorage.SetItemAsync<CharacterData>("CharacterData", characters);
     }
 
@@ -174,6 +199,7 @@
     {
         _characterDefinitions = await _dataService.LoadData();
         await NotificationService.Success("Data loaded");
+        await snackbarStack.PushAsync("Data loaded", SnackbarColor.Success);
         //var data = await _localStorage.GetItemAsync<CharacterData>("CharacterData");
     }
 
@@ -181,12 +207,14 @@
     {
         _characterDefinitions = await _dataService.ImportCompressed(_importData);
         await NotificationService.Success("Data imported");
+        await snackbarStack.PushAsync("Data imported", SnackbarColor.Success);
     }
 
     private async Task Export()
     {
         _importData = _dataService.ExportCompressed(_characterDefinitions);
         await NotificationService.Success("Data exported");
+        await snackbarStack.PushAsync("Data exported", SnackbarColor.Success);
     }
 
     private async Task ToggleView()

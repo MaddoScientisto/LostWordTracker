@@ -16,5 +16,7 @@
 
         public bool Enabled { get; set; }
 
+        public bool HasRebirth { get; set; }
+        public string RebirthPortrait { get; set; }
     }
 }

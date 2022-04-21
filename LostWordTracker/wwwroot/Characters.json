@@ -11,7 +11,9 @@
       "FarmTier": "A",
       "CqTier": "S",
       "ObtainType": "Prayer",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_100105.png"
     },
     "2": {
       "Id": 2,
@@ -24,7 +26,9 @@
       "FarmTier": "B",
       "CqTier": "C",
       "ObtainType": "Prayer",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_100205_0.png"
     },
     "3": {
       "Id": 3,
@@ -50,7 +54,9 @@
       "FarmTier": "S",
       "CqTier": "EX",
       "ObtainType": "UltraFes",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_101105.png"
     },
     "5": {
       "Id": 5,
@@ -154,7 +160,9 @@
       "FarmTier": "S",
       "CqTier": "S",
       "ObtainType": "Prayer",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_100703.png"
     },
     "13": {
       "Id": 13,
@@ -466,7 +474,9 @@
       "FarmTier": "A",
       "CqTier": "S",
       "ObtainType": "Fes",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_102505.webp"
     },
     "37": {
       "Id": 37,
@@ -661,7 +671,9 @@
       "FarmTier": "B",
       "CqTier": "S",
       "ObtainType": "Fes",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_100904.webp"
     },
     "52": {
       "Id": 52,
@@ -778,7 +790,9 @@
       "FarmTier": "E",
       "CqTier": "D",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "CanRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_103302.png"
     },
     "61": {
       "Id": 61,
@@ -791,7 +805,9 @@
       "FarmTier": "E",
       "CqTier": "C-",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_104002_0.png"
     },
     "62": {
       "Id": 62,
@@ -804,7 +820,9 @@
       "FarmTier": "E",
       "CqTier": "D",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_101203_0.png"
     },
     "63": {
       "Id": 63,
@@ -895,7 +913,9 @@
       "FarmTier": "E",
       "CqTier": "C",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_SQ_103705.png"
     },
     "70": {
       "Id": 70,
@@ -921,7 +941,9 @@
       "FarmTier": "B",
       "CqTier": "C\u002B",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_100506.png"
     },
     "72": {
       "Id": 72,
@@ -960,7 +982,9 @@
       "FarmTier": "B",
       "CqTier": "B",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_103204.png"
     },
     "75": {
       "Id": 75,
@@ -1051,7 +1075,9 @@
       "FarmTier": "B",
       "CqTier": "B",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_101505.png"
     },
     "82": {
       "Id": 82,
@@ -1194,7 +1220,9 @@
       "FarmTier": "E",
       "CqTier": "B",
       "ObtainType": "Pray",
-      "Enabled": true
+      "Enabled": true,
+      "HasRebirth": true,
+      "RebirthPortrait": "Chara_Square_Thumbnail_100604.png"
     },
     "93": {
       "Id": 93,
@@ -1325,6 +1353,32 @@
       "CqTier": "EX",
       "ObtainType": "Sfes",
       "Enabled": true
+    },
+    "103": {
+      "Id": 103,
+      "Name": "Seija",
+      "ShortName": "Seija",
+      "Universe": "L1",
+      "Portrait": "208101_thumbnail.webp",
+      "Tier": "A",
+      "TierRank": 4,
+      "FarmTier": "A",
+      "CqTier": "A",
+      "ObtainType": "Pray",
+      "Enabled": false
+    },
+    "104": {
+      "Id": 104,
+      "Name": "Shinmyoumaru",
+      "ShortName": "Shinmyoumaru",
+      "Universe": "L1",
+      "Portrait": "208101_thumbnail.webp",
+      "Tier": "A",
+      "TierRank": 4,
+      "FarmTier": "A",
+      "CqTier": "A",
+      "ObtainType": "Pray",
+      "Enabled": false
     }
   }
 }

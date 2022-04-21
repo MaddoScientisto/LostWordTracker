@@ -88,10 +88,14 @@ namespace LostWordTracker.Core.Services.Impl
                 };
 
 
-                var imgBytes = await _databaseService.GetFont($"images/portraits/{currentBaseChar.Portrait}");
+                var imgBytes = currentBaseChar.HasRebirth && item.Rebirth ? await _databaseService.GetFont($"images/portraits/{currentBaseChar.RebirthPortrait}") : await _databaseService.GetFont($"images/portraits/{currentBaseChar.Portrait}");
                 using var imgStream = new MemoryStream(imgBytes);
 
                 var portrait = await Image.LoadAsync(imgStream);
+                if (currentBaseChar.HasRebirth)
+                {
+                    portrait.Mutate(x => x.Resize(new Size(100,100)));
+                }
 
                 image.Mutate(x => x.DrawImage(portrait, new Point(cursorX, cursorY), 1));
 
