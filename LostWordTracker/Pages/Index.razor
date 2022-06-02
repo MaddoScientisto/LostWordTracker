@@ -191,7 +191,7 @@
     {
         await _dataService.SaveData(_characterDefinitions);
         await NotificationService.Success("Data saved");
-        await snackbarStack.PushAsync("Data saved", SnackbarColor.Success);
+        //await snackbarStack.PushAsync("Data saved", SnackbarColor.Success);
         //await _localStorage.SetItemAsync<CharacterData>("CharacterData", characters);
     }
 
@@ -199,7 +199,7 @@
     {
         _characterDefinitions = await _dataService.LoadData();
         await NotificationService.Success("Data loaded");
-        await snackbarStack.PushAsync("Data loaded", SnackbarColor.Success);
+        //await snackbarStack.PushAsync("Data loaded", SnackbarColor.Success);
         //var data = await _localStorage.GetItemAsync<CharacterData>("CharacterData");
     }
 
@@ -207,14 +207,14 @@
     {
         _characterDefinitions = await _dataService.ImportCompressed(_importData);
         await NotificationService.Success("Data imported");
-        await snackbarStack.PushAsync("Data imported", SnackbarColor.Success);
+        //await snackbarStack.PushAsync("Data imported", SnackbarColor.Success);
     }
 
     private async Task Export()
     {
         _importData = _dataService.ExportCompressed(_characterDefinitions);
         await NotificationService.Success("Data exported");
-        await snackbarStack.PushAsync("Data exported", SnackbarColor.Success);
+        //await snackbarStack.PushAsync("Data exported", SnackbarColor.Success);
     }
 
     private async Task ToggleView()

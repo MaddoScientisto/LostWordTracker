@@ -1381,7 +1381,7 @@
       "Enabled": true
     },
     "105": {
-      "Id": 103,
+      "Id": 105,
       "Name": "Eiki Shiki Yamanaxadu",
       "ShortName": "Eiki Shiki",
       "Universe": "L1",
@@ -1394,7 +1394,7 @@
       "Enabled": true
     },
     "106": {
-      "Id": 104,
+      "Id": 106,
       "Name": "Aunn Komano",
       "ShortName": "Aunn",
       "Universe": "L1",
@@ -1407,7 +1407,7 @@
       "Enabled": true
     },
     "107": {
-      "Id": 103,
+      "Id": 107,
       "Name": "Yachie Kicchou",
       "ShortName": "Yachie",
       "Universe": "L1",
@@ -1420,7 +1420,7 @@
       "Enabled": true
     },
     "108": {
-      "Id": 104,
+      "Id": 108,
       "Name": "Mayumi Joutouguu",
       "ShortName": "Mayumi",
       "Universe": "L1",
@@ -1433,7 +1433,7 @@
       "Enabled": true
     },
     "109": {
-      "Id": 104,
+      "Id": 109,
       "Name": "Remilia Scarlet (Tiny Devil Mistress)",
       "ShortName": "Remilia (smol)",
       "Universe": "E9",
@@ -1444,6 +1444,150 @@
       "CqTier": "EX",
       "ObtainType": "Sfes",
       "Enabled": true
+    },
+    "110": {
+      "Id": 110,
+      "Name": "Flandre Scarlet (Vampire Pursuing the Hunter)",
+      "ShortName": "Flandre (Hunter)",
+      "Universe": "E1",
+      "Portrait": "300401_Avatar.webp",
+      "Tier": "EX",
+      "TierRank": 1,
+      "FarmTier": "EX",
+      "CqTier": "EX",
+      "ObtainType": "Sfes",
+      "Enabled": true
+    },
+    "111": {
+      "Id": 111,
+      "Name": "Yukari Yakumo (Cherry Blossom: Mastermind Behind Spiritng Away)",
+      "ShortName": "Yukari (Cherry)",
+      "Universe": "A7",
+      "Portrait": "300901_Avatar.webp",
+      "Tier": "S+",
+      "TierRank": 1,
+      "FarmTier": "S+",
+      "CqTier": "S+",
+      "ObtainType": "Fes",
+      "Enabled": true
+    },
+    "112": {
+      "Id": 112,
+      "Name": "Alice Margatroid (Cherry Blossom: Seven-colored Puppet Master)",
+      "ShortName": "Alice (Cherry)",
+      "Universe": "A7",
+      "Portrait": "203201_Avatar.webp",
+      "Tier": "S+",
+      "TierRank": 1,
+      "FarmTier": "S+",
+      "CqTier": "S+",
+      "ObtainType": "Fes",
+      "Enabled": true
+    },
+    "113": {
+      "Id": 113,
+      "Name": "Reisen Udongein Inaba (Lunatic Space Youkai)",
+      "ShortName": "Reisen (Space)",
+      "Universe": "B5",
+      "Portrait": "201501_Avatar.webp",
+      "Tier": "EX",
+      "TierRank": 10,
+      "FarmTier": "EX",
+      "CqTier": "EX",
+      "ObtainType": "Fes",
+      "Enabled": true
+    },
+    "114": {
+      "Id": 114,
+      "Name": "Rei'sen (Peacekeeper of the Capital)",
+      "ShortName": "Rei'sen (Space)",
+      "Universe": "B3",
+      "Portrait": "202301_Avatar.webp",
+      "Tier": "S+",
+      "TierRank": 10,
+      "FarmTier": "S+",
+      "CqTier": "S+",
+      "ObtainType": "Sfes",
+      "Enabled": true
+    },
+    "115": {
+      "Id": 115,
+      "Name": "Nue Houjuu",
+      "ShortName": "Nue",
+      "Universe": "L1",
+      "Portrait": "110401_Avatar.webp",
+      "Tier": "S+",
+      "TierRank": 10,
+      "FarmTier": "S+",
+      "CqTier": "S+",
+      "ObtainType": "Sfes",
+      "Enabled": true
+    },
+    "116": {
+      "Id": 116,
+      "Name": "Nazrin",
+      "ShortName": "Nazrin",
+      "Universe": "L1",
+      "Portrait": "110201_Avatar.webp",
+      "Tier": "S",
+      "TierRank": 10,
+      "FarmTier": "S",
+      "CqTier": "S",
+      "ObtainType": "Pray",
+      "Enabled": true
+    },
+    "117": {
+      "Id": 117,
+      "Name": "Kaguya Houraisan (Love Temple of Benevolence and Conscience)",
+      "ShortName": "Kaguya",
+      "Universe": "B3",
+      "Portrait": "110201_Avatar.webp",
+      "Tier": "S",
+      "TierRank": 10,
+      "FarmTier": "S",
+      "CqTier": "S",
+      "ObtainType": "Pray",
+      "Enabled": false
+    },
+    "120": {
+      "Id": 120,
+      "Name": "Blue Reimu",
+      "ShortName": "BluReimu",
+      "Universe": "B3",
+      "Portrait": "110201_Avatar.webp",
+      "Tier": "S",
+      "TierRank": 10,
+      "FarmTier": "S",
+      "CqTier": "S",
+      "ObtainType": "Epic",
+      "Enabled": false
+    },
+    "118": {
+      "Id": 118,
+      "Name": "Sanae Kochiya (A10)",
+      "ShortName": "Sanae (A10)",
+      "Universe": "A10",
+      "Portrait": "110201_Avatar.webp",
+      "Tier": "S",
+      "TierRank": 10,
+      "FarmTier": "S",
+      "CqTier": "S",
+      "ObtainType": "Epic",
+      "Enabled": false
+    },
+    "119": {
+      "Id": 119,
+      "Name": "Mononobe no Futo",
+      "ShortName": "Mononobe",
+      "Universe": "L1",
+      "Portrait": "110201_Avatar.webp",
+      "Tier": "S",
+      "TierRank": 10,
+      "FarmTier": "S",
+      "CqTier": "S",
+      "ObtainType": "Epic",
+      "Enabled": false
     }
+
   }
 }
