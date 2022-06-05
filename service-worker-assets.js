@@ -5,7 +5,7 @@
       "url": "404.html"
     },
     {
-      "hash": "sha256-x6opO\/sYv+itIADEFk2w4xKoA8dEsJaqL6u\/0CPqm6Y=",
+      "hash": "sha256-Jl04nWPB3UHHTWL7ucLaQDZnnFwT4z7MA8kMhzKrmqw=",
       "url": "Characters.json"
     },
     {
@@ -239,6 +239,10 @@
     {
       "hash": "sha256-i17PYzmh2AXEsTKjzMVXsHUaaOLlNYv5aghU9RIzD\/k=",
       "url": "images\/portraits\/201501_Avatar.webp"
+    },
+    {
+      "hash": "sha256-HC4fV7zAxS81f7ZxfkhZph4kloqOJW7pZaVZrw2127Y=",
+      "url": "images\/portraits\/201901_Avatar.webp"
     },
     {
       "hash": "sha256-zo3H6qgh1epwikzYiz0b225+fP8XrhzapxlOGzLYh9g=",
@@ -1129,5 +1133,5 @@
       "url": "_content\/Blazorise\/vendors\/Pickr.js"
     }
   ],
-  "version": "fOd7U11A"
+  "version": "Q\/jv5TzQ"
 };
