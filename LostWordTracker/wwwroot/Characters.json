@@ -1539,15 +1539,15 @@
     "117": {
       "Id": 117,
       "Name": "Kaguya Houraisan (Love Temple of Benevolence and Conscience)",
-      "ShortName": "Kaguya",
+      "ShortName": "Kaguya (Space)",
       "Universe": "B3",
-      "Portrait": "110201_Avatar.webp",
-      "Tier": "S",
+      "Portrait": "201901_Avatar.webp",
+      "Tier": "EX",
       "TierRank": 10,
       "FarmTier": "S",
       "CqTier": "S",
-      "ObtainType": "Pray",
-      "Enabled": false
+      "ObtainType": "Sfes",
+      "Enabled": true
     },
     "120": {
       "Id": 120,
